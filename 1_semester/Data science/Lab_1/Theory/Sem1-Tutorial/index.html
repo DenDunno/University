@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Методи статистичної обробки даних</title>
+  <meta name="description" content="Методи статистичної обробки даних" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Методи статистичної обробки даних" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Методи статистичної обробки даних" />
+  
+  
+  
+
+<meta name="author" content="Г.В. Лівінська, І.В. Розора" />
+
+
+<meta name="date" content="2020-09-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="ch1.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Зміст</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Вступ</a></li>
+<li class="chapter" data-level="1" data-path="ch1.html"><a href="ch1.html"><i class="fa fa-check"></i><b>1</b> Знайомство з R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="ch1.html"><a href="ch1.html#початок-роботи"><i class="fa fa-check"></i><b>1.1</b> Початок роботи</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="ch1.html"><a href="ch1.html#довідка"><i class="fa fa-check"></i><b>1.1.1</b> Довідка</a></li>
+<li class="chapter" data-level="1.1.2" data-path="ch1.html"><a href="ch1.html#арифметичні-дії"><i class="fa fa-check"></i><b>1.1.2</b> Арифметичні дії</a></li>
+<li class="chapter" data-level="1.1.3" data-path="ch1.html"><a href="ch1.html#порівняння-величин"><i class="fa fa-check"></i><b>1.1.3</b> Порівняння величин</a></li>
+<li class="chapter" data-level="1.1.4" data-path="ch1.html"><a href="ch1.html#пакети-в-r"><i class="fa fa-check"></i><b>1.1.4</b> Пакети в R</a></li>
+<li class="chapter" data-level="1.1.5" data-path="ch1.html"><a href="ch1.html#функції-в-r"><i class="fa fa-check"></i><b>1.1.5</b> Функції в R</a></li>
+<li class="chapter" data-level="1.1.6" data-path="ch1.html"><a href="ch1.html#умовний-оператор-та-цикли"><i class="fa fa-check"></i><b>1.1.6</b> Умовний оператор та цикли</a></li>
+<li class="chapter" data-level="1.1.7" data-path="ch1.html"><a href="ch1.html#написання-власних-функцій"><i class="fa fa-check"></i><b>1.1.7</b> Написання власних функцій</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="ch1.html"><a href="ch1.html#типи-даних-в-r"><i class="fa fa-check"></i><b>1.2</b> Типи даних в R</a></li>
+<li class="chapter" data-level="1.3" data-path="ch1.html"><a href="ch1.html#структури-даних-в-r"><i class="fa fa-check"></i><b>1.3</b> Структури даних в R</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="ch1.html"><a href="ch1.html#вектори"><i class="fa fa-check"></i><b>1.3.1</b> Вектори</a></li>
+<li class="chapter" data-level="1.3.2" data-path="ch1.html"><a href="ch1.html#матриці"><i class="fa fa-check"></i><b>1.3.2</b> Матриці</a></li>
+<li class="chapter" data-level="1.3.3" data-path="ch1.html"><a href="ch1.html#категоризовані-дані.-фактори"><i class="fa fa-check"></i><b>1.3.3</b> Категоризовані дані. Фактори</a></li>
+<li class="chapter" data-level="1.3.4" data-path="ch1.html"><a href="ch1.html#фрейми-таблиці-даних"><i class="fa fa-check"></i><b>1.3.4</b> Фрейми (таблиці) даних</a></li>
+<li class="chapter" data-level="1.3.5" data-path="ch1.html"><a href="ch1.html#списки"><i class="fa fa-check"></i><b>1.3.5</b> Списки</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="ch1.html"><a href="ch1.html#елементи-графіки-в-r"><i class="fa fa-check"></i><b>1.4</b> Елементи графіки в R</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="ch1.html"><a href="ch1.html#пакет-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Пакет graphics</a></li>
+<li class="chapter" data-level="1.4.2" data-path="ch1.html"><a href="ch1.html#графічні-можливості-пакету-ggplot2"><i class="fa fa-check"></i><b>1.4.2</b> Графічні можливості пакету ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="ch1.html"><a href="ch1.html#ймовірнісні-розподіли-в-r"><i class="fa fa-check"></i><b>1.5</b> Ймовірнісні розподіли в R</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="ch1.html"><a href="ch1.html#генерування-випадкової-вибірки"><i class="fa fa-check"></i><b>1.5.1</b> Генерування випадкової вибірки</a></li>
+<li class="chapter" data-level="1.5.2" data-path="ch1.html"><a href="ch1.html#генерування-комбінацій"><i class="fa fa-check"></i><b>1.5.2</b> Генерування комбінацій</a></li>
+<li class="chapter" data-level="1.5.3" data-path="ch1.html"><a href="ch1.html#ймовірнісні-розподіли"><i class="fa fa-check"></i><b>1.5.3</b> Ймовірнісні розподіли</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="ch1.html"><a href="ch1.html#створення-звітів-за-допомогою-r-markdown"><i class="fa fa-check"></i><b>1.6</b> Створення звітів за допомогою R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ch2.html"><a href="ch2.html"><i class="fa fa-check"></i><b>2</b> Попередня обробка даних</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ch2.html"><a href="ch2.html#дескриптивні-статистики"><i class="fa fa-check"></i><b>2.1</b> Дескриптивні статистики</a></li>
+<li class="chapter" data-level="2.2" data-path="ch2.html"><a href="ch2.html#графічні-методи-аналізу"><i class="fa fa-check"></i><b>2.2</b> Графічні методи аналізу</a></li>
+<li class="chapter" data-level="2.3" data-path="ch2.html"><a href="ch2.html#визначення-розподілу-величини-що-спостерігається"><i class="fa fa-check"></i><b>2.3</b> Визначення розподілу величини, що спостерігається</a></li>
+<li class="chapter" data-level="2.4" data-path="ch2.html"><a href="ch2.html#лабораторна-робота-1"><i class="fa fa-check"></i><b>2.4</b> Лабораторна робота 1</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="кореляційний-аналіз.html"><a href="кореляційний-аналіз.html"><i class="fa fa-check"></i><b>3</b> Кореляційний аналіз</a></li>
+<li class="chapter" data-level="4" data-path="регресійний-аналіз.html"><a href="регресійний-аналіз.html"><i class="fa fa-check"></i><b>4</b> Регресійний аналіз</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="регресійний-аналіз.html"><a href="регресійний-аналіз.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="регресійний-аналіз.html"><a href="регресійний-аналіз.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ch5.html"><a href="ch5.html"><i class="fa fa-check"></i><b>5</b> Дисперсійний аналіз</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="регресійний-аналіз.html"><a href="регресійний-аналіз.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="регресійний-аналіз.html"><a href="регресійний-аналіз.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="часові-ряди.html"><a href="часові-ряди.html"><i class="fa fa-check"></i><b>6</b> Часові ряди</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="часові-ряди.html"><a href="часові-ряди.html#аналіз-часових-рядів"><i class="fa fa-check"></i><b>6.1</b> Аналіз часових рядів</a></li>
+<li class="chapter" data-level="6.2" data-path="часові-ряди.html"><a href="часові-ряди.html#побудова-прогнозу-часового-ряду"><i class="fa fa-check"></i><b>6.2</b> Побудова прогнозу часового ряду</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>7</b> Prerequisites</a></li>
+<li class="chapter" data-level="8" data-path="prerequisites.html"><a href="prerequisites.html#prerequisites"><i class="fa fa-check"></i><b>8</b> Prerequisites</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Методи статистичної обробки даних</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Методи статистичної обробки даних</h1>
+<h2 class="subtitle"><em>Практикум</em></h2>
+<p class="author"><em>Г.В. Лівінська, І.В. Розора</em></p>
+<p class="date"><em>2020-09-06</em></p>
+</div>
+<div id="вступ" class="section level1 unnumbered" number="">
+<h1>Вступ</h1>
+<blockquote>
+<p>“All models are wrong, but some are useful.”</p>
+<p><em>George E. P. Box</em></p>
+</blockquote>
+<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="ch1.html#ch1">1</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="#methods"><strong>??</strong></a>.</p>
+<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Dalgaard <a href="#ref-Dalgaard2008" role="doc-biblioref">2008</a>)</span>.</p>
+
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Dalgaard2008">
+<p>Dalgaard, P. 2008. <em>Introductory Statistics with R</em>.</p>
+</div>
+<div id="ref-R-bookdown">
+<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="ch1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["MMOI-RMarkdown.pdf", "MMOI-RMarkdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
