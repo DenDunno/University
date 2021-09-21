@@ -9,14 +9,13 @@ ExchangeRate_UAH =  read_excel("ExchangeRate_UAH.xlsx",
 DollarExchangeRate = ExchangeRate_UAH[ExchangeRate_UAH$`Код літерний` == 'USD',]
 EuroExchangeRate = ExchangeRate_UAH[ExchangeRate_UAH$`Код літерний` == 'EUR',]
 
+x = DollarExchangeRate$`Офіційний курс гривні, грн`
 
 ExchangeRate_UAH$Дата = as.Date(ExchangeRate_UAH$Дата , "%d.%m.%Y")
 DollarExchangeRate$Дата = as.Date(DollarExchangeRate$Дата , "%d.%m.%Y")
 EuroExchangeRate$Дата = as.Date(EuroExchangeRate$Дата , "%d.%m.%Y")
 
+#install.packages("moments")
 
-plot(DollarExchangeRate$Дата , DollarExchangeRate$`Офіційний курс гривні, грн` , type = 'l' , col='red' , lwd = 2 , xlab = 'Дата' , ylab = 'Курс долара' , main = 'Курс гривні до долара')
-plot(sort(DollarExchangeRate$`Офіційний курс гривні, грн`) , type = 'l' , col='red' , lwd = 2)
-
-
-
+library(moments)
+library(MASS)
