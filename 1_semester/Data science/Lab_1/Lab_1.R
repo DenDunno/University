@@ -80,3 +80,8 @@ plot(pnorm(sort(x), mean(x), sd(x))
      , main = 'P-P діаграма')
 
 abline(0, 1, col="red")
+
+
+#10. Test
+lillie.test(x)
+sf.test(x)

@@ -19,3 +19,5 @@ EuroExchangeRate$Дата = as.Date(EuroExchangeRate$Дата , "%d.%m.%Y")
 
 library(moments)
 library(MASS)
+
+plot(DollarExchangeRate$Дата , DollarExchangeRate$`Офіційний курс гривні, грн` , type='l' , lwd = 2 , col="red" , xlab = "Дата" , ylab="Курс гривні" , main = "Курс гривні до долара за 20.09.2020 - 20.09.2021")
