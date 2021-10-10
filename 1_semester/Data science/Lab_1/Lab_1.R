@@ -83,5 +83,5 @@ abline(0, 1, col="red")
 
 
 #10. Test
-lillie.test(x)
-sf.test(x)
+
+shapiro.test(x)
