@@ -11,14 +11,14 @@ weaterHistory = read.csv(file = 'weatherHistory.csv', header = TRUE)
 weaterHistory = weaterHistory[-c(10)]
 weaterHistory = weaterHistory[-c(1:80000), ]
 
-x = weaterHistory[ , c(4 : 9)]
-x = x[-c(5)]
+data = weaterHistory[ , c(4 : 9)]
+data = data[-c(5)]
 
-names(x)[1] = 'Реальна температура'
-names(x)[2] = 'Уявна температура'
-names(x)[3] = 'Вологість'
-names(x)[4] = 'Швидкість вітру'
-names(x)[5] = 'Видимість'
+names(data)[1] = 'Реальна температура'
+names(data)[2] = 'Уявна температура'
+names(data)[3] = 'Вологість'
+names(data)[4] = 'Швидкість вітру'
+names(data)[5] = 'Видимість'
 
-
-my_cols <- c("#00AFBB", "#E7B800", "#FC4E07")  
+x = data$`Реальна температура`
+y = data$Вологість
