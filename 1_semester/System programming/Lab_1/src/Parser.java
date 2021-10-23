@@ -35,9 +35,10 @@ public class Parser
 
     private List<String> getAllWords(Iterable<String> lines)
     {
-        String delimiterRegex =  "[' ',—:\\.?!]";
+        String delimiterRegex =  "[' ',@—:\\.?!]";
         String quoteRegex = "[\"“”]";
         List<String> answer = new ArrayList<>();
+        List<String> finalAnswer = new ArrayList<>();
 
         for (String line : lines)
         {
@@ -51,6 +52,11 @@ public class Parser
 
         answer.removeAll(Collections.singleton(""));
 
-        return answer;
+        for (String line : answer)
+        {
+            if (finalAnswer.contains(line) == false)
+                finalAnswer.add(line);
+        }
+        return finalAnswer;
     }
 }

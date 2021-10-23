@@ -2,8 +2,10 @@ cat("\014")
 
 #install.packages('corrplot')
 #install.packages("GGally")
+#install.packages("lme4")
 library(corrplot)
 library(GGally)
+library(lme4)
 
 setwd("D:/Business/Study/Univ/3_course/1_semester/Data science/Lab_3/")
 

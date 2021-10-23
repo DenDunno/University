@@ -2,65 +2,111 @@ package com.company;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Automata
 {
-    private final ArrayList<Transition> transitions;
-    private final ArrayList<Integer> finalStates;
-    private final char[] word;
-    private Integer curState;
-    private int startState;
-    private int finalStatesCount;
+    private final HashMap<Integer, List<Integer>> inputArcs;
+    private final HashMap<Integer, List<Integer>> outputArcs;
 
-    public Automata(String automataPath, char[] word) throws FileNotFoundException {
-        finalStates = new ArrayList<>();
-        transitions = new ArrayList<>();
+    public Automata(String automataPath) throws FileNotFoundException {
+        inputArcs = new HashMap<>();
+        outputArcs = new HashMap<>();
+
         readStates(automataPath);
-        this.word = word;
     }
 
     private void readStates(String automataPath) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(automataPath));
-        sc.nextInt();
-        sc.nextInt();
-        startState = sc.nextInt();
 
-        finalStatesCount = sc.nextInt();
-
-        for (int i = 0; i < finalStatesCount; i++) {
-            finalStates.add(sc.nextInt());
-        }
+        sc.nextLine();
+        sc.nextLine();
+        sc.nextLine();
+        sc.nextLine();
 
         while (sc.hasNextLine()) {
             int state1 = sc.nextInt();
-            char symbol = sc.next().charAt(0);
+            sc.next();
             int state2 = sc.nextInt();
-            Transition curTrans = new Transition(state1, symbol, state2);
-            transitions.add(curTrans);
+
+            updateMap(inputArcs, state2, state1);
+            updateMap(outputArcs, state1, state2);
         }
     }
 
-    private void setNextState() {
-        curState = startState;
+    private void updateMap(HashMap<Integer, List<Integer>> transTable, int key, int state) {
+        List<Integer> value;
 
-        for (char symbol : word) {
-            transitions.stream().filter(s -> (s.State1.equals(curState) && s.Symbol == symbol))
-                    .findFirst().ifPresentOrElse(s -> curState = s.State2, () -> curState = null);
+        if(transTable.containsKey(key)) {
+            value = transTable.get(key);
         }
+        else {
+            value = new ArrayList<>();
+        }
+
+        value.add(state);
+        transTable.put(key, value);
     }
 
-    public Boolean isWordReadable() {
-        setNextState();
+    public List<Integer> findDeadEndStates() {
+        var deadEndStates = new ArrayList<Integer>();
 
-        if (curState != null && curState != startState) {
-            for (int i = 0; i < finalStatesCount; i++) {
-                if (curState.equals(finalStates.get(i))) {
-                    return true;
-                }
+        List<Integer> keys = outputArcs.keySet().stream().collect(Collectors.toList());
+        List<Integer> value;
+        for (var key : keys) {
+            value = outputArcs.get(key);
+
+            if(value.size() == 1 && value.get(0).equals(key)) {
+                deadEndStates.add(key);
             }
         }
 
-        return false;
+        return deadEndStates;
+    }
+
+    public List<Integer> findUnattainableStates() {
+        var unattainableStates = new ArrayList<Integer>();
+
+        List<Integer> allStates = outputArcs.keySet().stream().collect(Collectors.toList());
+        List<Integer> keys = inputArcs.keySet().stream().collect(Collectors.toList());
+        List<Integer> value;
+
+        if (keys.size() < allStates.size()) {
+            allStates.forEach(state -> {
+                if (!keys.contains(state)) {
+                    unattainableStates.add(state);
+                }
+            });
+        }
+
+        if (unattainableStates.size() > 0) {
+            int startSize;
+            int finalSize;
+
+            do {
+                startSize = unattainableStates.size();
+                for(var key : keys) {
+                    if (!unattainableStates.contains(key)) {
+                        value = inputArcs.get(key);
+
+                        List<Integer> goodStates = value.stream()
+                                .filter(state -> !unattainableStates.contains(state) && !state.equals(key))
+                                .collect(Collectors.toList());
+
+                        if(goodStates.size() == 0) {
+                            unattainableStates.add(key);
+                        }
+                    }
+                }
+                finalSize = unattainableStates.size();
+            }
+            while (startSize != finalSize);
+        }
+
+        return unattainableStates;
     }
 }
