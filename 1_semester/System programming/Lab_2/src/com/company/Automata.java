@@ -12,6 +12,7 @@ public class Automata
 {
     private final HashMap<Integer, List<Integer>> inputArcs;
     private final HashMap<Integer, List<Integer>> outputArcs;
+    private Integer startState;
 
     public Automata(String automataPath) throws FileNotFoundException {
         inputArcs = new HashMap<>();
@@ -25,7 +26,9 @@ public class Automata
 
         sc.nextLine();
         sc.nextLine();
-        sc.nextLine();
+
+        startState = sc.nextInt();
+
         sc.nextLine();
 
         while (sc.hasNextLine()) {
@@ -69,44 +72,40 @@ public class Automata
     }
 
     public List<Integer> findUnattainableStates() {
-        var unattainableStates = new ArrayList<Integer>();
+        var attainableStates = new ArrayList<Integer>();
 
         List<Integer> allStates = outputArcs.keySet().stream().collect(Collectors.toList());
-        List<Integer> keys = inputArcs.keySet().stream().collect(Collectors.toList());
         List<Integer> value;
+        Integer startSize;
+        Integer finalSize;
 
-        if (keys.size() < allStates.size()) {
-            allStates.forEach(state -> {
-                if (!keys.contains(state)) {
-                    unattainableStates.add(state);
-                }
-            });
-        }
+        value = outputArcs.get(startState);
 
-        if (unattainableStates.size() > 0) {
-            int startSize;
-            int finalSize;
+        attainableStates.addAll(
+                value.stream()
+                        .filter(val -> val != startState)
+                                                .collect(Collectors.toList())
+        );
 
-            do {
-                startSize = unattainableStates.size();
-                for(var key : keys) {
-                    if (!unattainableStates.contains(key)) {
-                        value = inputArcs.get(key);
+        do {
+            startSize = attainableStates.size();
 
-                        List<Integer> goodStates = value.stream()
-                                .filter(state -> !unattainableStates.contains(state) && !state.equals(key))
-                                .collect(Collectors.toList());
-
-                        if(goodStates.size() == 0) {
-                            unattainableStates.add(key);
+            for (var state : allStates) {
+                if (!attainableStates.contains(state)) {
+                    value = inputArcs.get(state);
+                    value.forEach(val -> {
+                        if (attainableStates.contains(val)) {
+                            attainableStates.add(state);
                         }
-                    }
+                    });
                 }
-                finalSize = unattainableStates.size();
             }
-            while (startSize != finalSize);
+            finalSize = attainableStates.size();
         }
+        while(startSize != finalSize);
 
-        return unattainableStates;
+        allStates.removeAll(attainableStates);
+
+        return allStates;
     }
 }
