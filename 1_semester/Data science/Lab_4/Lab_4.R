@@ -1,0 +1,2 @@
+
+stripchart(installs ~ genres)

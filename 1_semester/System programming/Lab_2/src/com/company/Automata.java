@@ -105,6 +105,7 @@ public class Automata
         while(startSize != finalSize);
 
         allStates.removeAll(attainableStates);
+        allStates.remove(startState);
 
         return allStates;
     }
