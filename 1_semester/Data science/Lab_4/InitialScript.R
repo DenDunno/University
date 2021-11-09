@@ -1,16 +1,14 @@
 cat("\014")  
 
+library(RColorBrewer)
 library(ggplot2)
 library(dplyr)
+library(MASS)
 
 setwd("D:/Business/Study/Univ/3_course/1_semester/Data science/Lab_4/")
+options(scipen = 999)
 
-googlePlayStore = read.csv(file = 'googleplaystore.csv', header = TRUE)
+diamonds = read.csv(file = 'diamonds_dataset.csv', header = TRUE)
 
-googlePlayStore$Category = as.factor(googlePlayStore$Category)
-googlePlayStore = group_by(googlePlayStore, googlePlayStore$Category)
-
-installs = googlePlayStore$Installs
-genres = googlePlayStore$Category
-
-as = googlePlayStore$Installs[substr(name,1,nchar(name)-1)]
+diamonds$Category = as.factor(diamonds$shape)
+diamonds = group_by(diamonds, diamonds$shape)
