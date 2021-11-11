@@ -21,8 +21,3 @@ summary(model)
 
 
 kruskal.test(diamonds$price ~ diamonds$shape, diamonds)
-
-# Manual evaluation
-vars = tapply(diamonds$price, diamonds$shape, var) # групові дисперсії
-varMean = mean(vars) # середня групова дисперсія
-generalVar = var(diamonds$price)
