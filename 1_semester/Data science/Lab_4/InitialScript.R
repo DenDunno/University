@@ -11,5 +11,5 @@ options(scipen = 999)
 
 diamonds = read.csv(file = 'diamonds_dataset.csv', header = TRUE)
 
-diamonds$Category = as.factor(diamonds$shape)
+diamonds$shape = as.factor(diamonds$shape)
 diamonds = group_by(diamonds, diamonds$shape)

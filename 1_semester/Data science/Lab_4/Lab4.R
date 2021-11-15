@@ -4,12 +4,15 @@ ds = read.csv('titanic.csv', header=TRUE)
 attach(ds)
 ds$Pclass = as.factor(ds$Pclass)
 ds<-group_by(ds, ds$Pclass)
+
 # 1. Linear scatterplot (stripchart) with means
 stripchart(Age ~ Pclass, xlab = "Вік", ylab = "Клас", col=c("red", "green", "blue"))
 means<-tapply(Age, Pclass, mean)
+
 # 2. ANOVA
 # 2.1 Normality visual test
 ggplot(ds, aes(x = Age)) + geom_histogram() + facet_wrap(~ Pclass, ncol = 1)
+
 # 2.2. Homoskedasticity visual and Bartlett test
 boxplot(Age~Pclass, data = ds, xlab = "Вік", ylab = "Клас", varwidth = T, col = "lightblue")
 bartlett.test(Age~Pclass, data = ds)
@@ -20,17 +23,11 @@ anova(model)
 summary(model)
 # 2.5 Kruskal-Wallis test
 kruskal.test(Age ~ Pclass, ds)
+
+
 # 3. Contrast analysis
 contrasts(ds$Pclass)
 contrasts(ds$Pclass)<-contr.sum(n=3)
 contrasts(ds$Pclass)
 model2<-lm(Age~Pclass, data=ds)
 summary(model2)
-setwd("D:/Business/Study/Univ/3_course/1_semester/Data science/Lab_4/")
-options(scipen = 999)
-diamonds = read.csv(file = 'diamonds_dataset.csv', header = TRUE)
-diamonds$shape = as.factor(diamonds$shape)
-diamonds = group_by(diamonds, diamonds$shape)
-model = lm(diamonds$price ~ diamonds$shape, data = diamonds)
-anova(model)
-summary(model)
