@@ -5,11 +5,15 @@ library(ggplot2)
 library(dplyr)
 library(MASS)
 library(effsize)
+library(dplyr)
+library(factoextra)
+library(stats)
+library(ggfortify)
 
-setwd("D:/Business/Study/Univ/3_course/1_semester/Data science/Lab_4/")
-options(scipen = 999)
+setwd("D:/Business/Study/Univ/3_course/1_semester/Data science/Lab_6/")
 
-diamonds = read.csv(file = 'diamonds_dataset.csv', header = TRUE)
+menu = read.csv(file = 'menu.csv', header = TRUE)
+menu = head(menu,50)
+menu = data.frame(Name = menu$Item, Calories = menu$Calories , Cholesterol = menu$Cholesterol)
 
-diamonds$shape = as.factor(diamonds$shape)
-diamonds = group_by(diamonds, diamonds$shape)
+row.names(menu) = menu$Name
