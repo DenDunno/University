@@ -34,4 +34,31 @@ kMeans = kmeans(menu[2:3], 2)
 fviz_cluster(kMeans, data=menu[2:3], palette="jco",
              choose.vars=c("Calories","Cholesterol"),
              ggtheme=theme_minimal(),
-             cex.lab = 20)
+             labelsize = 8)
+
+
+# 2. Optimal clusters' amount
+fviz_nbclust(menu[2:3], kmeans, method="gap_stat")
+fviz_nbclust(menu[2:3], kmeans, method="silhouette")
+fviz_nbclust(menu[2:3], kmeans, method="wss")
+
+
+# 3. Best clustering results
+averageСut = cutree(average, k=2)
+plot(average, main="Average linkage method")
+rect.hclust(average , k=2, border=1:6)
+fviz_cluster(list(data=menu[2:3], cluster=averageСut),
+             ggtheme=theme_minimal(),
+             labelsize = 8)
+
+medianCut = cutree(median, k=2)
+plot(average, main="Median method")
+rect.hclust(average , k=2, border=1:6)
+fviz_cluster(list(data=menu[2:3], cluster=medianCut),
+             ggtheme=theme_minimal(),
+             labelsize = 8)
+
+
+# 4. Rand index
+rand.index(as.numeric(as.factor(menu$Category)), averageСut)
+rand.index(as.numeric(as.factor(menu$Category)), medianCut)
