@@ -10,8 +10,10 @@ public class ArraysLab : ILab
     
     public void Start()
     {
-        var array = new List<int>(50);
+        var array = new List<int>(15);
         array.FillWithRandom(0, 100);
+        
+        array.ShowAll();
         _sortingOrder.Order(array);
         array.ShowAll();
     }

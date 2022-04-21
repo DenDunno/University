@@ -1,3 +1,3 @@
 ﻿
-ILab lab = new ArraysLab(new SortingFromCentreByDescending());
+ILab lab = new ArraysLab(new EvenIndexSorting());
 lab.Start();
