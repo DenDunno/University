@@ -1,0 +1,15 @@
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.exe
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.deps.json
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.runtimeconfig.json
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.dll
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.pdb
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.csproj.AssemblyReference.cache
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.AssemblyInfoInputs.cache
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.AssemblyInfo.cs
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.csproj.CoreCompileInputs.cache
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.dll
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\refint\Algorithms.dll
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.pdb
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.genruntimeconfig.cache
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\ref\Algorithms.dll
