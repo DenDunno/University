@@ -1,20 +1,21 @@
 ﻿
 public class ArraysLab : ILab
 {
-    private readonly ISortingOrder _sortingOrder;
+    private readonly IArraySortingOrder _arraySortingOrder;
 
-    public ArraysLab(ISortingOrder sortingOrder)
+    public ArraysLab(IArraySortingOrder arraySortingOrder)
     {
-        _sortingOrder = sortingOrder;
+        _arraySortingOrder = arraySortingOrder;
     }
     
     public void Start()
     {
         var array = new List<int>(15);
-        array.FillWithRandom(0, 100);
+        array.FillWithRandom(10, 100);
         
         array.ShowAll();
-        _sortingOrder.Order(array);
+        _arraySortingOrder.Order(array);
         array.ShowAll();
+        Console.WriteLine();
     }
 }

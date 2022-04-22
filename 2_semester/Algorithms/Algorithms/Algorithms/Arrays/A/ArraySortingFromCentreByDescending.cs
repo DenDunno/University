@@ -1,5 +1,5 @@
 ﻿
-public class SortingFromCentreByDescending : SortingFromCentre
+public class ArraySortingFromCentreByDescending : ArraySortingFromCentre
 {
     protected override int GetOrderedValue(List<int> sortedArray, int i)
     {

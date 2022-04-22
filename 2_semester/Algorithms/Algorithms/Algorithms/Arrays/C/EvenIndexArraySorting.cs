@@ -1,7 +1,7 @@
 ﻿
-public class EvenIndexSorting : ISortingOrder
+public class EvenIndexArraySorting : IArraySortingOrder
 {
-    void ISortingOrder.Order(List<int> array)
+    void IArraySortingOrder.Order(List<int> array)
     {
         FillArrays(array, out List<int> even, out List<int> notEven);
         even.Sort();

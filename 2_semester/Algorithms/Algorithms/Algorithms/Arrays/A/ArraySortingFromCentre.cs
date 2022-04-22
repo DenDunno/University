@@ -1,7 +1,7 @@
 ﻿
-public abstract class SortingFromCentre : ISortingOrder
+public abstract class ArraySortingFromCentre : IArraySortingOrder
 {
-    void ISortingOrder.Order(List<int> array)
+    void IArraySortingOrder.Order(List<int> array)
     {
         var sortedArray = new List<int>(array);
         sortedArray.Sort();
