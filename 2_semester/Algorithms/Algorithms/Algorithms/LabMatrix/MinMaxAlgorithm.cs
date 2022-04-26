@@ -1,21 +1,15 @@
 ﻿
 public class MinMaxAlgorithm
 {
-    private readonly Matrix _matrix;
     private readonly List<int> _minimums = new();
     private readonly List<int> _maximums = new();
     
-    public MinMaxAlgorithm(Matrix matrix)
-    {
-        _matrix = matrix;
-    }
-
-    public MinMax Evaluate()
+    public MinMax Evaluate(Matrix matrix)
     {
         _minimums.Clear();
         _maximums.Clear();
 
-        foreach (List<int> raw in _matrix.Elements)
+        foreach (List<int> raw in matrix.Elements)
         {
             var sortedRaw = new List<int>(raw);
             sortedRaw.Sort();

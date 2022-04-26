@@ -10,14 +10,14 @@ public class MatrixLab : ILab
     
     void ILab.Start()
     {
-        var matrix = new Matrix(6);
-        var minMaxAlgorithm = new MinMaxAlgorithm(matrix);
+        var matrix = new Matrix(7);
+        var minMaxAlgorithm = new MinMaxAlgorithm();
         
         matrix.FillWithRandom();
         matrix.ShowAll();
         
         _matrixSortingOrder.Order(matrix);
-        MinMax minMax = minMaxAlgorithm.Evaluate();
+        MinMax minMax = minMaxAlgorithm.Evaluate(matrix);
         
         Console.WriteLine($"{minMax.Min} {minMax.Max}\n");
         matrix.ShowAll();

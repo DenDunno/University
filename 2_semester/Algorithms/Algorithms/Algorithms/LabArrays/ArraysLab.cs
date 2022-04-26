@@ -8,7 +8,7 @@ public class ArraysLab : ILab
         _arraySortingOrder = arraySortingOrder;
     }
     
-    public void Start()
+    void ILab.Start()
     {
         var array = new List<int>(15);
         array.FillWithRandom(10, 100);
