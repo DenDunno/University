@@ -1,9 +1,9 @@
 ﻿
-public class ThreeDimensionalArrayLab : ILab
+public class SpaceLab : ILab
 {
     private readonly ISpaceSortingOrder _spaceSortingOrder;
 
-    public ThreeDimensionalArrayLab(ISpaceSortingOrder spaceSortingOrder)
+    public SpaceLab(ISpaceSortingOrder spaceSortingOrder)
     {
         _spaceSortingOrder = spaceSortingOrder;
     }

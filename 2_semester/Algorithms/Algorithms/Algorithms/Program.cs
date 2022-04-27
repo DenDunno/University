@@ -13,9 +13,11 @@ ILab[] labs =
     new MatrixLab(new EMatrixSortingOrder()),
     new MatrixLab(new FMatrixSortingOrder()),
     
-    new ThreeDimensionalArrayLab(new SpaceXSortingOrder()),
-    new ThreeDimensionalArrayLab(new SpaceYSortingOrder()),
-    new ThreeDimensionalArrayLab(new SpaceZSortingOrder())
+    new SpaceLab(new SpaceXSortingOrder()),
+    new SpaceLab(new SpaceYSortingOrder()),
+    new SpaceLab(new SpaceZSortingOrder()),
+    
+    new LabArrayManipulations()
 };
 
 
