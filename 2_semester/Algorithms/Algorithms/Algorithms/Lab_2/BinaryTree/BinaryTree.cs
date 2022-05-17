@@ -1,5 +1,5 @@
 ﻿
-public class BinaryTree
+public class BinaryTree : IRandomFilling
 {
     private readonly BinaryTreeTraversal _binaryTreeTraversal = new BinaryTreeTraversal();
     private readonly int _size;
