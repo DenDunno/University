@@ -1,13 +1,13 @@
 ﻿
 public static class EnumerableExtensions
 {
-    public static void FillWithRandom(this List<int> collection, int rangeFrom, int rangeTo)
+    public static void FillWithRandom(this List<int> collection)
     {
         var random = new Random();
 
         for (int i = 0; i < collection.Capacity; ++i)
         {
-            collection.Add(random.Next(rangeFrom, rangeTo));
+            collection.Add(random.Next(0, 100));
         }
     }
 

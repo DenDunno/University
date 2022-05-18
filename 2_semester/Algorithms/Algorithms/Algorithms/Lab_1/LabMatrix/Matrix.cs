@@ -15,7 +15,7 @@ public class Matrix
     {
         foreach (List<int> raw in Elements)
         {
-            raw.FillWithRandom(10, 100);
+            raw.FillWithRandom();
         }
     }
 

@@ -11,7 +11,7 @@ public class ArraysLab : ILab
     void ILab.Start()
     {
         var array = new List<int>(15);
-        array.FillWithRandom(10, 100);
+        array.FillWithRandom();
         
         array.ShowAll();
         _arraySortingOrder.Order(array);

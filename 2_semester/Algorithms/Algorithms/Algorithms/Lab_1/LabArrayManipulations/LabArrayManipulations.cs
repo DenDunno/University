@@ -18,7 +18,7 @@ public class LabArrayManipulations : ILab
     private List<int> ConstructAndShowList()
     {
         var list = new List<int>(10);
-        list.FillWithRandom(10, 100);
+        list.FillWithRandom();
         list.ShowAll();
 
         return list;

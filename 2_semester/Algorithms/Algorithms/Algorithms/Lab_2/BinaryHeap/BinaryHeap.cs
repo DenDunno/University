@@ -2,7 +2,7 @@
 public class BinaryHeap : IRandomFilling
 {
     private readonly List<int> _collection;
-
+    
     public BinaryHeap(int size)
     {
         _collection = new List<int>(size);

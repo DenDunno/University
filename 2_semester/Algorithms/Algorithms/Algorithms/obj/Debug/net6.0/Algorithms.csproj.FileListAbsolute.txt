@@ -13,3 +13,4 @@ D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms
 D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.pdb
 D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\Algorithms.genruntimeconfig.cache
 D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\obj\Debug\net6.0\ref\Algorithms.dll
+D:\Business\Univ\University_3_course\2_semester\Algorithms\Algorithms\Algorithms\bin\Debug\net6.0\Algorithms.dll.config
