@@ -1,0 +1,60 @@
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.exe
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.deps.json
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.runtimeconfig.json
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.pdb
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.AssemblyReference.cache
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.AssemblyInfoInputs.cache
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.AssemblyInfo.cs
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.CoreCompileInputs.cache
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\refint\СomputationalGeometry.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.pdb
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.genruntimeconfig.cache
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\ref\СomputationalGeometry.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Compute.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Core.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Graphics.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Input.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Mathematics.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.OpenAL.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.Common.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.Desktop.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.GraphicsLibraryFramework.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\linux-x64\native\libglfw.so.3.3
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\osx-x64\native\libglfw.3.dylib
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\win-x64\native\glfw3.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\win-x86\native\glfw3.dll
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.CopyComplete
+D:\Business\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.exe
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.deps.json
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.runtimeconfig.json
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\СomputationalGeometry.pdb
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Compute.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Core.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Graphics.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Input.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Mathematics.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.OpenAL.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.Common.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.Desktop.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\OpenTK.Windowing.GraphicsLibraryFramework.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\linux-x64\native\libglfw.so.3.3
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\osx-x64\native\libglfw.3.dylib
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\win-x64\native\glfw3.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\bin\Debug\net6.0\runtimes\win-x86\native\glfw3.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.AssemblyReference.cache
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.AssemblyInfoInputs.cache
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.AssemblyInfo.cs
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.CoreCompileInputs.cache
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.csproj.CopyComplete
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\refint\СomputationalGeometry.dll
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.pdb
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\СomputationalGeometry.genruntimeconfig.cache
+D:\Business\Univ\University_3_course\2_semester\Computer graphics\СomputationalGeometry\СomputationalGeometry\СomputationalGeometry\obj\Debug\net6.0\ref\СomputationalGeometry.dll

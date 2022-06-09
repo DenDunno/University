@@ -1,3 +1,3 @@
 ﻿
-ILab lab = new Lab2();
+ILab lab = new Lab3();
 lab.Start();
