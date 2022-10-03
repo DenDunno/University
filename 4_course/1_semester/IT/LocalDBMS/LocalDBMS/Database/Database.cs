@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using LocalDBMS;
 
 public class Database : DatabaseElement
 {

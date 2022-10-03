@@ -46,16 +46,25 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Database\Cell.cs" />
+        <Compile Include="Database\Columns\IColumn.cs" />
+        <Compile Include="Database\Columns\IntColumn.cs" />
         <Compile Include="Database\Database.cs" />
         <Compile Include="Database\DatabaseElement.cs" />
         <Compile Include="Database\Table.cs" />
+        <Compile Include="Database\Validation\CharValidation.cs" />
+        <Compile Include="Database\Validation\DateValidation.cs" />
+        <Compile Include="Database\Validation\IntValidation.cs" />
+        <Compile Include="Database\Validation\IValidation.cs" />
+        <Compile Include="Database\Validation\ReadValidation.cs" />
+        <Compile Include="Database\Validation\StringValidation.cs" />
         <Compile Include="Extensions\ButtonExtensions.cs" />
         <Compile Include="Extensions\ToolStripExtensions.cs" />
         <Compile Include="MainWindow.cs">
-            <SubType>Form</SubType>
+          <SubType>Form</SubType>
         </Compile>
         <Compile Include="MainWindow.Designer.cs">
-            <DependentUpon>MainWindow.cs</DependentUpon>
+          <DependentUpon>MainWindow.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
