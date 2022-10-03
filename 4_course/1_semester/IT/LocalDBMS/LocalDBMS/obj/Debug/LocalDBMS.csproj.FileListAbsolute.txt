@@ -9,3 +9,14 @@ D:\Denys_Bondar\Common\Univ\University\4_course\1_semester\IT\LocalDBMS\LocalDBM
 D:\Denys_Bondar\Common\Univ\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.exe
 D:\Denys_Bondar\Common\Univ\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.pdb
 D:\Denys_Bondar\Common\Univ\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.MainWindow.resources
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\bin\Debug\LocalDBMS.exe.config
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\bin\Debug\LocalDBMS.exe
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\bin\Debug\LocalDBMS.pdb
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.AssemblyReference.cache
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.SuggestedBindingRedirects.cache
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.MainWindow.resources
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.Properties.Resources.resources
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.GenerateResource.cache
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.CoreCompileInputs.cache
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.exe
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.pdb

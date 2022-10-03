@@ -6,6 +6,7 @@ namespace LocalDBMS
     public partial class MainWindow : Form
     {
         private readonly UI _ui;
+        private Database _database;
         
         public MainWindow()
         {
@@ -13,30 +14,50 @@ namespace LocalDBMS
             _ui = new UI(this);
         }
 
-        private void CreateDatabaseButton_Click(object sender, EventArgs e)
+        private void CreateDatabase_Click(object sender, EventArgs e)
         {
-            string databaseName = DatabaseNameTextBox.Text;
-            
-            if (databaseName != string.Empty)
-            {
-                var database = new Database(databaseName);
-                _ui.HideEntryPanel();
-                _ui.CreateDataGridView();
-                _ui.SetWindowName(databaseName);
-            }
-            else
-            {
-                MessageBox.Show("Name cannot be empty"); 
-            }
-            
+            _ui.ShowInputPanel(CreateDatabase);
         }
 
-        private void LoadDatabaseButton_Click(object sender, EventArgs e)
+        private void LoadDatabase_Click(object sender, EventArgs e)
         {
-            if (_ui.TryGetPathToDatabase(out string path))
+        }
+
+        private void CreateTable_Click(object sender, EventArgs e)
+        {
+            _ui.ShowInputPanel(CreateTable);
+        }
+
+        private void DeleteItem_Hover(object sender, EventArgs e)
+        {
+            var deleteTableItem = (ToolStripMenuItem)sender;
+            deleteTableItem.DropDownItems.Clear();
+
+            foreach (DatabaseElement databaseElement in _database.TablesNames)
             {
-                MessageBox.Show("China");
+                ToolStripItem tableToDelete = deleteTableItem.DropDownItems.Add(databaseElement.Name);
+                tableToDelete.Click += DeleteTable;
             }
+        }
+
+        private void CreateDatabase()
+        {
+            _ui.SetUpUI();
+            _database = new Database(TextBox.Text);
+        }
+
+        private void CreateTable()
+        {
+            _ui.CreateDataGridView();
+            _database.Add(new Table(TextBox.Text));
+        }
+
+        private void DeleteTable(object sender, EventArgs e)
+        {
+            string tableName = ((ToolStripMenuItem)sender).Text;
+
+            _ui.DeleteTab(tableName);
+            _database.Delete(tableName);
         }
     }
 }
