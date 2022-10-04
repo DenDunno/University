@@ -59,5 +59,11 @@ namespace LocalDBMS
             _ui.DeleteTab(tableName);
             _database.Delete(tableName);
         }
+
+        private void Aboba(object sender, EventArgs e)
+        {
+            var arguments = (DataGridViewCellEventArgs)e;
+            MessageBox.Show(arguments.ColumnIndex + " " + arguments.RowIndex);
+        }
     }
 }

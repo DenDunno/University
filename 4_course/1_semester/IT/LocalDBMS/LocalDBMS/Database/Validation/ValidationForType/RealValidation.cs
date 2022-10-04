@@ -1,7 +1,6 @@
-﻿
-using System;
+﻿using System;
 
-public class ReadValidation : IValidation
+public class RealValidation : IValidation
 {
     public void Apply(object value)
     {

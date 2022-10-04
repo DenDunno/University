@@ -41,6 +41,8 @@
             this.InputPanel = new System.Windows.Forms.Panel();
             this.AcceptInputButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
+            this.dataGridBoolColumn1 = new System.Windows.Forms.DataGridBoolColumn();
+            this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
             this.MenuStrip.SuspendLayout();
             this.InputPanel.SuspendLayout();
             this.SuspendLayout();
@@ -73,21 +75,21 @@
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.CreateDatabase_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.LoadDatabase_Click);
             // 
             // SaveMenuItem
             // 
             this.SaveMenuItem.Name = "SaveMenuItem";
-            this.SaveMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.SaveMenuItem.Size = new System.Drawing.Size(108, 22);
             this.SaveMenuItem.Text = "Save";
             this.SaveMenuItem.Visible = false;
             // 
@@ -139,6 +141,16 @@
             this.TextBox.Size = new System.Drawing.Size(156, 20);
             this.TextBox.TabIndex = 0;
             // 
+            // dataGridBoolColumn1
+            // 
+            this.dataGridBoolColumn1.Width = -1;
+            // 
+            // dataGridTextBoxColumn1
+            // 
+            this.dataGridTextBoxColumn1.Format = "";
+            this.dataGridTextBoxColumn1.FormatInfo = null;
+            this.dataGridTextBoxColumn1.Width = -1;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +172,9 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataGridBoolColumn dataGridBoolColumn1;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn1;
 
         public System.Windows.Forms.Button AcceptInputButton;
 

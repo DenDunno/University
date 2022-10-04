@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using LocalDBMS;
 
 public class Database : DatabaseElement
 {
@@ -19,8 +18,7 @@ public class Database : DatabaseElement
 
     public void Delete(string tableName)
     {
-        Table tableToDelete = _tables.Find(table => table.Name == tableName);
-        _tables.Remove(tableToDelete);
+        _tables.Remove(table => table.Name == tableName);
     }
 
     public void Load(string path)
