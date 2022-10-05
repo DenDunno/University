@@ -24,9 +24,31 @@ public class DataGridViewFactory
         };
 
         dataGridView.CellEndEdit += OnCellEndEdit;
+        dataGridView.CellMouseClick += OnCellMouseClick;
+        
         SetTransform(dataGridView);
         CreateColumns(dataTable);
         AttachDataGridViewToTab(dataGridView);
+    }
+
+    private void OnCellMouseClick(object sender, DataGridViewCellMouseEventArgs args)
+    {
+        if (args.Button != MouseButtons.Right)
+        {
+            return;   
+        }
+
+        var dataGridView = (DataGridView)sender;
+        
+        if (args.RowIndex == -1 && args.ColumnIndex >= 0)
+        {
+            dataGridView.Columns.RemoveAt(args.ColumnIndex);
+        }
+        
+        if (args.RowIndex >= 0 && args.ColumnIndex == -1 && args.RowIndex != dataGridView.RowCount - 1)
+        {
+            dataGridView.Rows.RemoveAt(args.RowIndex);
+        }
     }
 
     private void OnCellEndEdit(object sender, DataGridViewCellEventArgs args)
@@ -54,11 +76,11 @@ public class DataGridViewFactory
     
     private void CreateColumns(DataTable dataTable)
     {
-        dataTable.Columns.Add(new DataColumn("STRING"));
-        dataTable.Columns.Add(new DataColumn("INT"));
-        dataTable.Columns.Add(new DataColumn("CHAR"));
-        dataTable.Columns.Add(new DataColumn("REAL"));
-        dataTable.Columns.Add(new DataColumn("COLOR"));
-        dataTable.Columns.Add(new DataColumn("DATE"));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.STRING));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.INT));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.CHAR));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.REAL));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.COLOR));
+        dataTable.Columns.Add(new DataColumn(DatabaseTypesName.DATE));
     }
 }

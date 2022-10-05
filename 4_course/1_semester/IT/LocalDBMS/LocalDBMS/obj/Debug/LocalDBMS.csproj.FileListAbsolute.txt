@@ -20,3 +20,6 @@ D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj
 D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.CoreCompileInputs.cache
 D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.exe
 D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.pdb
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\bin\Debug\Newtonsoft.Json.dll
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\bin\Debug\Newtonsoft.Json.xml
+D:\Denys_Bondar\Common\University\4_course\1_semester\IT\LocalDBMS\LocalDBMS\obj\Debug\LocalDBMS.csproj.CopyComplete

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 using LocalDBMS;
 
@@ -49,4 +47,15 @@ public class UI
     public bool TryGetPathToDatabase(out string path) => _databasePathDialog.TryGetPathToDatabase(out path);
 
     public void DeleteTab(string tableName) => _view.TabControl.DeleteTab(tableName);
+
+    public void AddColumn(string text)
+    {
+        var dataGridView = _view.TabControl.SelectedTab.Controls[0] as DataGridView;
+        dataGridView.Columns.Add(text, text);
+    }
+
+    public void TryShowAddColumnItem()
+    {
+        _view.AddColumnMenuItem.Visible = _view.TabControl.TabPages.Count != 0;
+    }
 }

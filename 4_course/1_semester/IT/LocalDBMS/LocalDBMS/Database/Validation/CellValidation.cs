@@ -6,12 +6,12 @@ public class CellValidation
 {
     private readonly Dictionary<string, IValidation> _validations = new Dictionary<string, IValidation>()
     {
-        {"STRING", new StringValidation()},
-        {"INT", new IntValidation()},
-        {"CHAR", new CharValidation()},
-        {"REAL", new RealValidation()},
-        {"COLOR", new ColorValidation()},
-        {"DATE", new DateValidation()},
+        {DatabaseTypesName.STRING, new StringValidation()},
+        {DatabaseTypesName.INT, new IntValidation()},
+        {DatabaseTypesName.CHAR, new CharValidation()},
+        {DatabaseTypesName.REAL, new RealValidation()},
+        {DatabaseTypesName.COLOR, new ColorValidation()},
+        {DatabaseTypesName.DATE, new DateValidation()},
     };
 
     public void TrySaveValue(DataGridViewCell cell, string column)

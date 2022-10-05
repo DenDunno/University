@@ -7,11 +7,15 @@ namespace LocalDBMS
     {
         private readonly UI _ui;
         private Database _database;
+        private DatabaseSave _databaseSave;
         
         public MainWindow()
         {
             InitializeComponent();
             _ui = new UI(this);
+            _databaseSave = new DatabaseSave(TabControl);
+            deleteToolStripMenuItem.MouseHover += OnDeleteItemHover;
+            AddColumnMenuItem.MouseHover += OnAddColumnHover;
         }
 
         private void CreateDatabase_Click(object sender, EventArgs e)
@@ -28,7 +32,7 @@ namespace LocalDBMS
             _ui.ShowInputPanel(CreateTable);
         }
 
-        private void DeleteItem_Hover(object sender, EventArgs e)
+        private void OnDeleteItemHover(object sender, EventArgs e)
         {
             var deleteTableItem = (ToolStripMenuItem)sender;
             deleteTableItem.DropDownItems.Clear();
@@ -40,6 +44,23 @@ namespace LocalDBMS
             }
         }
 
+        private void OnAddColumnHover(object sender, EventArgs e)
+        {
+            var deleteTableItem = (ToolStripMenuItem)sender;
+            deleteTableItem.DropDownItems.Clear();
+
+            foreach (string type in DatabaseTypesName.Types)
+            {
+                ToolStripItem tableToDelete = deleteTableItem.DropDownItems.Add(type);
+                tableToDelete.Click += AddColumn;
+            }
+        }
+
+        private void AddColumn(object sender, EventArgs e)
+        {
+            _ui.AddColumn(((ToolStripMenuItem)sender).Text);
+        }
+
         private void CreateDatabase()
         {
             _ui.SetUpUI();
@@ -48,8 +69,15 @@ namespace LocalDBMS
 
         private void CreateTable()
         {
-            _ui.CreateDataGridView();
-            _database.Add(new Table(TextBox.Text));
+            try
+            {
+                _database.Add(new Table(TextBox.Text));
+                _ui.CreateDataGridView();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void DeleteTable(object sender, EventArgs e)
@@ -60,10 +88,14 @@ namespace LocalDBMS
             _database.Delete(tableName);
         }
 
-        private void Aboba(object sender, EventArgs e)
+        private void TableMenuItem_Click(object sender, EventArgs e)
         {
-            var arguments = (DataGridViewCellEventArgs)e;
-            MessageBox.Show(arguments.ColumnIndex + " " + arguments.RowIndex);
+            _ui.TryShowAddColumnItem();
+        }
+
+        private void SaveClick(object sender, EventArgs e)
+        {
+            _databaseSave.Save("D:/");
         }
     }
 }

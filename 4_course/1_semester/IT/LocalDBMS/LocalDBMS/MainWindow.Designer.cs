@@ -38,6 +38,7 @@
             this.TableMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddColumnMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InputPanel = new System.Windows.Forms.Panel();
             this.AcceptInputButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
@@ -75,45 +76,53 @@
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.CreateDatabase_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.LoadDatabase_Click);
             // 
             // SaveMenuItem
             // 
             this.SaveMenuItem.Name = "SaveMenuItem";
-            this.SaveMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.SaveMenuItem.Size = new System.Drawing.Size(152, 22);
             this.SaveMenuItem.Text = "Save";
             this.SaveMenuItem.Visible = false;
+            this.SaveMenuItem.Click += new System.EventHandler(this.SaveClick);
             // 
             // TableMenuItem
             // 
-            this.TableMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.createToolStripMenuItem1, this.deleteToolStripMenuItem });
+            this.TableMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.createToolStripMenuItem1, this.deleteToolStripMenuItem, this.AddColumnMenuItem });
             this.TableMenuItem.Name = "TableMenuItem";
             this.TableMenuItem.Size = new System.Drawing.Size(46, 20);
             this.TableMenuItem.Text = "Table";
             this.TableMenuItem.Visible = false;
+            this.TableMenuItem.Click += new System.EventHandler(this.TableMenuItem_Click);
             // 
             // createToolStripMenuItem1
             // 
             this.createToolStripMenuItem1.Name = "createToolStripMenuItem1";
-            this.createToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.createToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.createToolStripMenuItem1.Text = "Create";
             this.createToolStripMenuItem1.Click += new System.EventHandler(this.CreateTable_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.MouseHover += DeleteItem_Hover;
+            // 
+            // AddColumnMenuItem
+            // 
+            this.AddColumnMenuItem.Name = "AddColumnMenuItem";
+            this.AddColumnMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AddColumnMenuItem.Text = "Add column";
+            this.AddColumnMenuItem.Visible = false;
             // 
             // InputPanel
             // 
@@ -172,6 +181,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public System.Windows.Forms.ToolStripMenuItem AddColumnMenuItem;
 
         private System.Windows.Forms.DataGridBoolColumn dataGridBoolColumn1;
         private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn1;
