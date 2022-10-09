@@ -78,14 +78,14 @@
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
             this.createToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.createToolStripMenuItem.Text = "Create";
-            this.createToolStripMenuItem.Click += new System.EventHandler(this.CreateDatabase_Click);
+            this.createToolStripMenuItem.Click += new System.EventHandler(this.CreateDatabaseClick);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.LoadDatabase_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.LoadClick);
             // 
             // SaveMenuItem
             // 
@@ -109,7 +109,7 @@
             this.createToolStripMenuItem1.Name = "createToolStripMenuItem1";
             this.createToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.createToolStripMenuItem1.Text = "Create";
-            this.createToolStripMenuItem1.Click += new System.EventHandler(this.CreateTable_Click);
+            this.createToolStripMenuItem1.Click += new System.EventHandler(this.CreateTableClick);
             // 
             // deleteToolStripMenuItem
             // 

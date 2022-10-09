@@ -40,12 +40,12 @@ public class DataGridViewFactory
 
         var dataGridView = (DataGridView)sender;
         
-        if (args.RowIndex == -1 && args.ColumnIndex >= 0)
+        if (args.RowIndex == -1 && args.ColumnIndex >= 0 && args.ColumnIndex < dataGridView.ColumnCount)
         {
             dataGridView.Columns.RemoveAt(args.ColumnIndex);
         }
         
-        if (args.RowIndex >= 0 && args.ColumnIndex == -1 && args.RowIndex != dataGridView.RowCount - 1)
+        if (args.ColumnIndex == -1 && args.RowIndex >= 0 && args.RowIndex < dataGridView.RowCount - 1)
         {
             dataGridView.Rows.RemoveAt(args.RowIndex);
         }

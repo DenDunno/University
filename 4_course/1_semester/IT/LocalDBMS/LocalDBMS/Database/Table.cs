@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 [Serializable]
-public class Table : DatabaseElement
+public class Table
 {
-    public Table(string name) : base(name)
-    {
-    }
+    public List<string> Fields { get; set; } = new List<string>();
+    public List<List<string>> Data { get; set; } = new List<List<string>>();
 }

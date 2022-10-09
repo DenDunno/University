@@ -2,38 +2,39 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-[Serializable]
-public class Database : DatabaseElement
+public class Database 
 {
-    private readonly List<Table> _tables = new List<Table>();
-    
-    public Database(string name) : base(name)
+    private readonly List<string> _tableNames = new List<string>();
+    private readonly DatabaseSaving _databaseSaving = new DatabaseSaving();
+    private readonly DatabaseLoading _databaseLoading = new DatabaseLoading();
+    private string _name;
+
+    public void SetName(string name)
     {
+        _name = name;
     }
 
-    public IReadOnlyCollection<DatabaseElement> TablesNames => _tables;
+    public IReadOnlyCollection<string> TableNames => _tableNames;
 
-    public void Add(Table tableToAdd)
+    public void Add(string tableToAdd)
     {
-        if (_tables.Find(table => table.Name == tableToAdd.Name) != null)
+        if (_tableNames.Find(name => name == tableToAdd) != null)
         {
-            throw new Exception($"Table with name {tableToAdd.Name} already exists");
+            throw new Exception($"Table with name {tableToAdd} already exists");
         }
             
-        _tables.Add(tableToAdd);
+        _tableNames.Add(tableToAdd);
     }
 
-    public void Delete(string tableName)
-    {
-        _tables.Remove(table => table.Name == tableName);
-    }
+    public void Delete(string tableName) => _tableNames.Remove(table => table == tableName);
 
-    public void Load(string path)
-    {
-        MessageBox.Show(path);
-    }
+    public bool TryLoad(out DatabaseSaveData databaseSaveData) => _databaseLoading.TryLoad(out databaseSaveData);
 
-    public void Save(string path)
+    public void Save(TabControl tabControl) => _databaseSaving.Save(tabControl, _name, _tableNames);
+
+    public void Clear()
     {
+        _name = string.Empty;
+        _tableNames.Clear();
     }
 }

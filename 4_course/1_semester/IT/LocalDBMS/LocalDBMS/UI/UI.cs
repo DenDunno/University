@@ -5,7 +5,6 @@ using LocalDBMS;
 public class UI
 {
     private readonly MainWindow _view;
-    private readonly DatabasePathDialog _databasePathDialog = new DatabasePathDialog();
     private readonly DataGridViewFactory _dataGridViewFactory;
     
     public UI(MainWindow view)
@@ -28,23 +27,26 @@ public class UI
             }
             else
             {
-                _view.InputPanel.Visible = false;
+                HideInputPanel();
                 onAccept();    
             }
         };
     }
 
-    public void SetUpUI()
+    public void HideInputPanel()
     {
-        _view.Text = $"LocalDBMS - {_view.TextBox.Text}";
+        _view.InputPanel.Visible = false;
+    }
+
+    public void SetUpUI(string databaseName)
+    {
+        _view.Text = $"LocalDBMS - {databaseName}";
         _view.TableMenuItem.Visible = true;
         _view.SaveMenuItem.Visible = true;
         _view.TabControl.TabPages.Clear();
     }
 
     public void CreateDataGridView() => _dataGridViewFactory.Create();
-
-    public bool TryGetPathToDatabase(out string path) => _databasePathDialog.TryGetPathToDatabase(out path);
 
     public void DeleteTab(string tableName) => _view.TabControl.DeleteTab(tableName);
 

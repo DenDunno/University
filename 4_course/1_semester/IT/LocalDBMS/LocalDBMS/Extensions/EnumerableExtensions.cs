@@ -8,4 +8,9 @@ public static class EnumerableExtensions
         T element = collection.Find(predicate);
         collection.Remove(element);
     }
+
+    public static bool InRange<T>(this ICollection<T> collection, int index)
+    {
+        return index >= 0 && index < collection.Count;
+    }
 }
