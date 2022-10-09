@@ -6,7 +6,6 @@ public class Database
 {
     private readonly List<string> _tableNames = new List<string>();
     private readonly DatabaseSaving _databaseSaving = new DatabaseSaving();
-    private readonly DatabaseLoading _databaseLoading = new DatabaseLoading();
     private string _name;
 
     public void SetName(string name)
@@ -27,8 +26,6 @@ public class Database
     }
 
     public void Delete(string tableName) => _tableNames.Remove(table => table == tableName);
-
-    public bool TryLoad(out DatabaseSaveData databaseSaveData) => _databaseLoading.TryLoad(out databaseSaveData);
 
     public void Save(TabControl tabControl) => _databaseSaving.Save(tabControl, _name, _tableNames);
 

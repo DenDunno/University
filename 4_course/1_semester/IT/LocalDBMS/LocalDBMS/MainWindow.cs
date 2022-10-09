@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace LocalDBMS
@@ -8,11 +7,13 @@ namespace LocalDBMS
     {
         private readonly UI _ui;
         private readonly Database _database = new Database();
+        private readonly DatabaseLoading _databaseLoading;
 
         public MainWindow()
         {
             InitializeComponent();
             _ui = new UI(this);
+            _databaseLoading = new DatabaseLoading(_database, this, _ui);
             deleteToolStripMenuItem.MouseHover += OnDeleteItemHover;
             AddColumnMenuItem.MouseHover += OnAddColumnHover;
         }
@@ -50,53 +51,7 @@ namespace LocalDBMS
 
         private void LoadClick(object sender, EventArgs e)
         {
-            if (_database.TryLoad(out DatabaseSaveData databaseSaveData))
-            {
-                _database.Clear();
-                _ui.HideInputPanel();
-                _ui.SetUpUI(databaseSaveData.Name);
-
-                for (int i = 0; i < databaseSaveData.TableNames.Count; ++i)
-                {
-                    _ui.CreateDataGridView();
-                    _database.Add(databaseSaveData.TableNames[i]);
-                    
-                    TabPage tabPage = TabControl.TabPages[i];
-                    tabPage.Text = databaseSaveData.TableNames[i];
-                    var dataGridView = tabPage.Controls[0] as DataGridView;
-                    dataGridView.Columns.Clear();
-                    
-                    Table table = databaseSaveData.Tables[i];
-
-                    var dataTable = new DataTable();
-
-                    for (int j = 0; j < table.Data.Count; j++)
-                    {
-                        dataTable.Rows.Add();
-                    }
-                    
-                    for (int j = 0; j < table.Fields.Count; j++)
-                    {
-                        dataTable.Columns.Add();
-                    }
-
-                    for (int j = 0; j < table.Data.Count; ++j)
-                    {
-                        for (int k = 0; k < table.Fields.Count; ++k)
-                        {
-                            dataTable.Rows[j][k] = table.Data[j][k];
-                        }
-                    }
-                    
-                    dataGridView.DataSource = dataTable;
-
-                    for (int j = 0; j < table.Fields.Count; j++)
-                    {
-                        dataGridView.Columns[j].Name = table.Fields[j];
-                        dataGridView.Columns[j].HeaderText = table.Fields[j];
-                    }
-                }
-            }
+            _databaseLoading.TryLoad();
         }
 
         private void OnDeleteItemHover(object sender, EventArgs e)
