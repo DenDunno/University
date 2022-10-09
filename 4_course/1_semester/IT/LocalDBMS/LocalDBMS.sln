@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDBMS", "LocalDBMS\LocalDBMS.csproj", "{18794827-2C8A-4CC4-8AFC-0AB05D49628E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7FBACDAB-0759-420B-A0EE-A21DD2790F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{18794827-2C8A-4CC4-8AFC-0AB05D49628E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18794827-2C8A-4CC4-8AFC-0AB05D49628E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18794827-2C8A-4CC4-8AFC-0AB05D49628E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBACDAB-0759-420B-A0EE-A21DD2790F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBACDAB-0759-420B-A0EE-A21DD2790F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBACDAB-0759-420B-A0EE-A21DD2790F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBACDAB-0759-420B-A0EE-A21DD2790F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,14 @@
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\Tests.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\Tests.pdb
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\nunit.framework.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\nunit.framework.xml
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\obj\Debug\Tests.csproj.AssemblyReference.cache
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\obj\Debug\Tests.csproj.CopyComplete
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\obj\Debug\Tests.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\obj\Debug\Tests.pdb
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\LocalDBMS.exe
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\LocalDBMS.pdb
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\LocalDBMS.exe.config
+D:\Business\University\University_3_course\4_course\1_semester\IT\LocalDBMS\Tests\bin\Debug\Newtonsoft.Json.xml
