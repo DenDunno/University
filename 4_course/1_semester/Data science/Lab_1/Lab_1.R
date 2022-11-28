@@ -57,13 +57,20 @@ print(mean4)
 print(mean5)
 
 sumByColumnTable = rbind(mean1, mean2, mean3, mean4, mean5)
-columnsSum = colSums(aboba)
+columnsSum = colSums(sumByColumnTable)
+print(columnsSum)
 
 sumMean1 = sum(mean1)
 sumMean2 = sum(mean2)
 sumMean3 = sum(mean3)
 sumMean4 = sum(mean4)
 sumMean5 = sum(mean5)
+
+print(sumMean1)
+print(sumMean2)
+print(sumMean3)
+print(sumMean4)
+print(sumMean5)
 
 Q1 = sum(mean1 * mean1) + 
      sum(mean2 * mean2) + 
@@ -211,10 +218,40 @@ ra_bcd <- (1 - (1 - rab * rab) * (1 - rac_b * rac_b) * (1 - rad_bc * rad_bc))
 print(ra_bcd)
 
 
-#Factor analysis
+# Factor analysis
 corData <- cor(data)
 eigenData <- eigen(corData)
 print(eigenData$values)
 plot(eigenData$values, type = "b", col="green")
 
 print(eigenData$vectors)
+print(eigenData$vectors %*% t(eigenData$vectors))
+
+NormalizedCardioStat <- scale(data, center=TRUE, scale = TRUE)
+MNormalizedCardioStat <- as.matrix(NormalizedCardioStat)
+print(MNormalizedCardioStat)
+res1 <- (MNormalizedCardioStat %*% t(eigenData$vectors[1:3,]))
+print(res1)
+
+plot(res1[,1], type = "l", col="green")
+plot(res1[,2], type = "l", col="green")
+plot(res1[,3], type = "l", col="green")
+
+
+# Кластерний аналіз
+CardioStat.kmeans7 <- kmeans(data, centers = 7)
+hist(CardioStat.kmeans7$cluster)
+print(CardioStat.kmeans7$cluster)
+
+CardioStat.kmeans7 <- kmeans(data, centers = 5)
+hist(CardioStat.kmeans7$cluster)
+print(CardioStat.kmeans7$cluster)
+
+MCardioStat.kmeans4 <- kmeans(res1, centers = 7)
+hist(MCardioStat.kmeans4$cluster)
+print(MCardioStat.kmeans4$cluster)
+
+MCardioStat.kmeans4 <- kmeans(res1, centers = 5)
+hist(MCardioStat.kmeans4$cluster)
+print(MCardioStat.kmeans4$cluster)
+
