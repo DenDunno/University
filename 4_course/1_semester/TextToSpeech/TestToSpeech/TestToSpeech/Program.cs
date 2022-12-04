@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-SoundsLoading soundsLoading = new("Sounds");
+SoundsLoading soundsLoading = new("Sounds/mp3");
 List<string> sounds = soundsLoading.Load();
 SyllableParser syllableParser = new(sounds);
 AACPlayer aacPlayer = new();

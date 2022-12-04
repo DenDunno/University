@@ -5,7 +5,7 @@ public static class TaskExtensions
     {
         await Task.Run(async () =>
         {
-            const int frequency = 25;
+            const int frequency = 1;
 
             while (predicate())
             {

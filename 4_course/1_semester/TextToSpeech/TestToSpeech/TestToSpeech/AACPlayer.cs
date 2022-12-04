@@ -6,8 +6,8 @@ public class AACPlayer
     {
         foreach (string syllable in syllables)
         {
-            await using AudioFileReader audioFile = new($"Sounds/{syllable}.aac");
-            using WaveOutEvent outputDevice = new();
+            AudioFileReader audioFile = new($"Sounds/mp3/{syllable}.mp3");
+            WaveOutEvent outputDevice = new();
             
             outputDevice.Init(audioFile);
             outputDevice.Play();
