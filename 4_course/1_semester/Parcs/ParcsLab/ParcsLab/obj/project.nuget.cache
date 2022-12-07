@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "TYzsDvOprIB3IqYhvx8q4TUerSVP31zplcIkpWMQLdI1VdvjdUBkLLygthUHRMNOAyqdYMApSiGwl6FAUKEyXg==",
+  "success": true,
+  "projectFilePath": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\Parcs\\ParcsLab\\ParcsLab\\ParcsLab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dunno\\.nuget\\packages\\commandlineparser\\2.3.0\\commandlineparser.2.3.0.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\parcs\\2.0.0\\parcs.2.0.0.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\parcs.module.commandline\\2.0.0\\parcs.module.commandline.2.0.0.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.collections\\4.0.11-rc2-24027\\system.collections.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.console\\4.0.0-rc2-24027\\system.console.4.0.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.diagnostics.debug\\4.0.11-rc2-24027\\system.diagnostics.debug.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.globalization\\4.0.11-rc2-24027\\system.globalization.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.io\\4.1.0-rc2-24027\\system.io.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.linq\\4.1.0-rc2-24027\\system.linq.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.linq.expressions\\4.0.11-rc2-24027\\system.linq.expressions.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.objectmodel\\4.0.12-rc2-24027\\system.objectmodel.4.0.12-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection\\4.1.0-rc2-24027\\system.reflection.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.emit\\4.0.1-rc2-24027\\system.reflection.emit.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.0.1-rc2-24027\\system.reflection.emit.ilgeneration.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.emit.lightweight\\4.0.1-rc2-24027\\system.reflection.emit.lightweight.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.extensions\\4.0.1-rc2-24027\\system.reflection.extensions.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.primitives\\4.0.1-rc2-24027\\system.reflection.primitives.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.reflection.typeextensions\\4.1.0-rc2-24027\\system.reflection.typeextensions.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.resources.resourcemanager\\4.0.1-rc2-24027\\system.resources.resourcemanager.4.0.1-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.runtime\\4.1.0-rc2-24027\\system.runtime.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.runtime.extensions\\4.1.0-rc2-24027\\system.runtime.extensions.4.1.0-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.text.encoding\\4.0.11-rc2-24027\\system.text.encoding.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.threading\\4.0.11-rc2-24027\\system.threading.4.0.11-rc2-24027.nupkg.sha512",
+    "C:\\Users\\Dunno\\.nuget\\packages\\system.threading.tasks\\4.0.11-rc2-24027\\system.threading.tasks.4.0.11-rc2-24027.nupkg.sha512"
+  ],
+  "logs": []
+}
