@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Parcs</title>
+    <authors>Andrii Khavro</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/AndriyKhavro/Parcs.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core library for Parcs.NET - Parallel distrubuted system for .NET</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>parallel distributed</tags>
+  </metadata>
+</package>

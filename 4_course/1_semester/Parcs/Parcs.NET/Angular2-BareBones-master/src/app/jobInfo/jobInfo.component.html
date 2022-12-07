@@ -1,0 +1,10 @@
+<h2>Application Feature!</h2>
+<ul>  
+  <li *ngFor="#job of jobs">
+    <span>Job N {{ job.number }} with priority {{ job.priority }} needs point: {{job.needsPoint}} {{job.isFinished ? 'is finished' : 'is running'}}.</span>
+    <span>Point count: {{job.points.length}}</span>
+    <button (click)="cancelJob(job.number)">Cancel</button>
+  </li>
+<ul>  
+<br />
+<a [routerLink]="['Home']">Back to Home</a>

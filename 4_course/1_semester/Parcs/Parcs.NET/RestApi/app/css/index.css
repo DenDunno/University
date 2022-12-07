@@ -1,0 +1,168 @@
+body {
+  padding-top: 70px; }
+
+.hosts {
+  padding-left: 30px; }
+
+.analytics {
+  margin-top: 10px; }
+
+.analytics-item {
+  padding-right: 0px;
+  margin-top: 5px; }
+  .analytics-item:last-of-type {
+    padding-right: 0; }
+
+.analytics-container {
+  border-radius: 6px;
+  background-color: #eee;
+  padding: 5px; }
+
+.analytics-chart {
+  height: 300px;
+  width: 100%; }
+
+.jobs-header {
+  padding-bottom: 10px; }
+  .jobs-header span {
+    padding-right: 0;
+    font-size: 18px; }
+
+.jobs-add {
+  padding-right: 0;
+  font-size: 18px;
+  color: #5cb85c;
+  text-align: left;
+  vertical-align: top; }
+  .jobs-add:hover {
+    color: #80c780;
+    cursor: pointer; }
+
+.hosts-header h4 {
+  margin: 0;
+  position: relative;
+  padding-left: 0; }
+
+.table-title {
+  font-size: 14px;
+  font-weight: 600; }
+
+.table-value {
+  font-size: 14px; }
+
+.logger {
+  border-left: #eee;
+  border-right: #eee;
+  margin-top: 20px; }
+
+.logger-title {
+  padding: 8px 0; }
+  .logger-title span {
+    font-size: 14px;
+    font-weight: 600; }
+  .logger-title button {
+    float: right; }
+
+.logger-time {
+  float: right;
+  font-weight: 600; }
+
+.logger-list {
+  height: 240px;
+  padding-right: 10px;
+  overflow: hidden;
+  overflow-y: scroll; }
+
+.panel-heading {
+  padding: 16px 0px 26px 0; }
+  .panel-heading b.running {
+    color: green; }
+  .panel-heading b.partlyRunning {
+    color: #5cb85c; }
+  .panel-heading b.cancelled {
+    color: #f0ad4e; }
+  .panel-heading b.finished {
+    color: #337AB7; }
+
+.noDataContainer {
+  position: relative;
+  min-height: 200px;
+  border: 5px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 5px; }
+
+.noDataContainer-title {
+  position: absolute;
+  display: inline-block;
+  width: 220px;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  margin-left: -100px;
+  font-size: 16px;
+  font-weight: 600; }
+
+.noDataWrapper {
+  padding: 0 0 0 15px; }
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee; }
+  .footer p {
+    padding: 0 10px; }
+
+.about pre {
+  padding: 20px;
+  font-size: 14px; }
+
+.about-photo {
+  width: 334px;
+  height: 260px;
+  background-image: url("../resources/authors.png"); }
+
+.about-surprise {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 30%;
+  right: 10.5%; }
+  .about-surprise:hover {
+    cursor: pointer; }
+
+.about-surprisePhoto {
+  position: absolute;
+  top: 10%;
+  right: 33%;
+  z-index: 10; }
+
+.removeButton {
+  font-size: 18px;
+  color: #C9302C; }
+  .removeButton:hover {
+    cursor: pointer; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-button {
+  width: 10px;
+  height: 0px; }
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px solid #ffffff;
+  border-radius: 26px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee; }
+
+::-webkit-scrollbar-track {
+  background: gray;
+  border: 0px solid #ffffff;
+  border-radius: 47px; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }

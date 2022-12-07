@@ -1,0 +1,16 @@
+<div class="container" style="width: 350px">
+    <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Sign up</h2>
+        <input type="text" class="form-control" placeholder="Username" data-ng-model="registration.userName" required autofocus>
+        <input type="password" class="form-control" style="margin-top: 5px" placeholder="Password" data-ng-model="registration.password" required>
+        <input type="password" class="form-control" style="margin-top: 5px" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 10px" data-ng-click="signUp()">Submit</button>
+
+        <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+
+            {{message}}
+
+        </div>
+    </form>
+</div>

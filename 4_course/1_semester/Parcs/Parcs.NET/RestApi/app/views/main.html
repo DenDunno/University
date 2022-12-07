@@ -1,0 +1,119 @@
+<div class="row">
+<div class="row">
+	<div class="col-md-6 noDataWrapper">
+		<div class="noDataContainer" ng-if="!data.jobs.length">
+			<div class="noDataContainer-title"><span>Start module to see Jobs</span>
+				<i class="glyphicon glyphicon-plus-sign jobs-add" ng-click="addJob()" ng-if="data.hosts.length"></i>
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive col-md-6" ng-if="data.jobs.length" style="clear: both">
+		<div class="jobs-header">
+			<span>Jobs</span>
+			<i class="glyphicon glyphicon-plus-sign jobs-add" ng-click="addJob()"></i>
+		</div>
+		<div class="table-title row">
+			<span class="col-md-1 col-sm-1">№</span>
+			<span class="col-md-2 col-sm-2">Priority</span>
+			<span class="col-md-2 col-sm-2">Status</span>
+			<span class="col-md-2 col-sm-2">Start</span>
+			<span class="col-md-2 col-sm-2">Finish</span>
+			<span class="col-md-1 col-sm-1"></span>
+			<span class="col-md-2 col-sm-2"></span>
+		</div>
+		<uib-accordion close-others="oneAtATime">
+			<uib-accordion-group ng-repeat="job in data.jobs" is-open="job.isOpened" is-disabled="!job.points.length">
+				<uib-accordion-heading>
+					<b class="col-md-1 col-sm-1 table-value">{{job.number}}</b>
+					<span class="col-md-2 col-sm-2 table-value">{{job.priority}}</span>
+					<b class="col-md-2 col-sm-2 table-value"
+						  ng-class="{'running': job.jobStatus === jobStatuses.running,
+						  'partlyRunning': job.jobStatus === jobStatuses.partlyRunning,
+						  'finished': job.jobStatus === jobStatuses.finished,
+						  'cancelled': job.jobStatus === jobStatuses.cancelled}">{{job.jobStatus}}
+					</b>
+					<span class="col-md-2 col-sm-2 table-value">{{job.startTimeUtc | date: "HH:mm:ss"}}</span>
+					<span class="col-md-2 col-sm-2 table-value">{{job.finishTimeUtc | date: "HH:mm:ss"}}</span>
+					<i class="text-right glyphicon glyphicon-remove-circle removeButton coll-md-1 col-sm-1" title="Cancel"
+							ng-click="cancelJob(job, $event)" ng-if="job.jobStatus !== jobStatuses.finished && job.jobStatus !== jobStatuses.cancelled"></i>
+					<i class="text-right glyphicon coll-md-2 col-sm-2"
+					   ng-class="{'glyphicon-chevron-down': job.isOpened, 'glyphicon-chevron-right': !job.isOpened}"
+					   ng-show="job.points && job.points.length">
+					</i>
+				</uib-accordion-heading>
+				<table class="table table-hover table-bordered">
+					<thead>
+					<th>№</th>
+					<th>IP</th>
+					<th>Is Finished</th>
+					</thead>
+					<tr ng-repeat="point in job.points">
+						<td>{{point.number}}</td>
+						<td>{{point.hostIpAddress}}</td>
+						<td>
+							<input type="checkbox" ng-model="point.isFinished" ng-disabled="true">
+						</td>
+					</tr>
+
+				</table>
+			</uib-accordion-group>
+		</uib-accordion>
+
+	</div>
+	<div class="col-md-6 noDataWrapper">
+		<div class="noDataContainer" ng-if="!data.hosts.length">
+			<p class="noDataContainer-title">Start server to see Hosts</p>
+		</div>
+	</div>
+	<div class="table-responsive col-md-6 hosts" ng-if="data.hosts.length">
+		<div class="row hosts-header">
+			<h4 class="col-md-6 col-sm-6">Hosts</h4>
+		</div>
+		<div class="table-title row">
+			<table class="table table-hover">
+				<thead>
+				<th>IP</th>
+				<th>Points</th>
+				<th>Processors</th>
+				<th>Linpack</th>
+				<th>Connected</th>
+				</thead>
+				<tr ng-repeat="host in data.hosts">
+					<td>
+						<b>{{host.ipAddress}}</b>
+					</td>
+					<td>{{host.pointCount}}</td>
+					<td>{{host.processorCount}}</td>
+					<td>{{host.linpackResult}}</td>
+					<td>
+						<input type="checkbox" ng-model="host.isConnected" ng-disabled="true">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+	<div class="row analytics">
+		<div class="col-md-6 analytics-item" style="clear: both">
+			<div class="analytics-container">
+				<chart options="charts[0]" data="data"></chart>
+			</div>
+		</div>
+		<div class="col-md-6 analytics-item">
+			<div class="analytics-container">
+				<chart options="charts[1]" data="data"></chart>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12 logger" ng-if="data.logs.length">
+		<div class="logger-title">
+			<h4>Log</h4>
+		</div>
+		<ul class="logger-list list-unstyled">
+			<li ng-repeat="log in data.logs">
+				<span class="text-success">{{log.message}}</span>
+				<span class="logger-time">{{log.dateTimeUtc | date: "HH:mm:ss"}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
