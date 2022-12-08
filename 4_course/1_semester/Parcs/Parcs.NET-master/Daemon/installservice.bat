@@ -1,0 +1,1 @@
+sc create ParcsDaemonRelease binpath="C:\Projects\parcscsharp\Parcs.NET\Daemon\bin\Release\DaemonPr.exe" start=auto

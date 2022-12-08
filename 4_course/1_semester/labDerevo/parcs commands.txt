@@ -1,0 +1,19 @@
+gcloud projects create hellacloudcomplabs
+gcloud config set project hellacloudcomplab
+gcloud config set compute/zone europe-north1-a
+gcloud config set compute/region europenorth1
+
+
+
+gcloud compute firewall-rules create allow-all --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0
+gcloud compute instances create-with-container master --container-image=registry.hub.docker.com/hummer12007/parcs-node --container-env PARCS_ARGS=“master”
+
+INTERNAL IP: 10.166.0.2
+EXTERNAL IP: 34.88.142.16 35.228.130.1  
+
+gcloud compute instances create-with-container worker2 --container-image=registry.hub.docker.com/hummer12007/parcs-node --container-env PARCS_ARGS=“worker 10.166.0.2”
+
+gcloud compute instances create-with-container worker3 worker4 --container-image=registry.hub.docker.com/hummer12007/parcs-node --container-env PARCS_ARGS=“worker 10.166.0.2”
+
+
+35.244.230.86:80

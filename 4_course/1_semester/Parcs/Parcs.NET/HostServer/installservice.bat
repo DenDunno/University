@@ -1,1 +1,0 @@
-sc create ParcsHostServerRelease binpath="C:\Projects\parcscsharp\Parcs.NET\HostServer\bin\Release\HostServer.exe"

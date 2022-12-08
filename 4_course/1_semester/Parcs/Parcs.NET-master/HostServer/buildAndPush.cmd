@@ -1,0 +1,1 @@
+docker build . -t andriikhavro/parcshostserver:windowsservercore-1709 && docker push andriikhavro/parcshostserver:windowsservercore-1709

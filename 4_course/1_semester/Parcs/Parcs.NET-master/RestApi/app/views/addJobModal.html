@@ -1,0 +1,23 @@
+<div class="modal-header ng-scope">
+	<h3 class="modal-title">Select a job to run</h3>
+</div>
+<div class="modal-body ng-scope">
+	<div class="btn-group" uib-dropdown is-open="status.isopen">
+		<button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+			{{selectedJob.name}} <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+			<li role="menuitem" ng-repeat="job in jobs"><a href="#" ng-click="setJob(job)">{{job.name}}</a></li>
+		</ul>
+	</div>
+	<div class="form-group" style="margin-top: 10px">
+		<label for="commandLineParameters">Command Line Parameters:</label>
+		<input type="text" class="form-control" id="commandLineParameters" ng-model="jobOptions.commandLineParameters">
+		<label for="priority">Priority:</label>
+		<input type="number" class="form-control" id="priority" min="1" max="16" ng-model="jobOptions.priority">
+	</div>
+</div>
+<div class="modal-footer ng-scope">
+	<button class="btn btn-primary" type="button" ng-click="startJob()">Start</button>
+	<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

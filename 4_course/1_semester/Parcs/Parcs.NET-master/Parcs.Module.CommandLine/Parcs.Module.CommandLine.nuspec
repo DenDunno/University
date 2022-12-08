@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Parcs.Module.CommandLine</title>
+    <authors>Andrii Khavro</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/AndriyKhavro/Parcs.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for Parcs.NET to create modules which can be run inside Parcs Web Application</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>parcs</tags>
+	<dependencies>
+            <dependency id="Parcs" version="1.0" />
+            <dependency id="CommandLineParser" version="1.9.71" />
+    </dependencies>
+  </metadata>
+</package>
