@@ -1,45 +1,105 @@
-﻿const input = document.querySelector('input');
-const log = document.getElementById('values');
-
-input.addEventListener('input', updateValue);
+﻿
+let columnNames = [];
+let rows = 0;
+let columns = 0;
 
 function toggleDropdown() 
 {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function setTableSize(newRows, newColumns) 
+{
+    rows = newRows;
+    columns = newColumns;
+
+    if (rows === 0)
+        rows = 1;
+
+    if (columns === 0)
+        columns = 1;
+}
+
+function erase(htmlElement)
+{
+    htmlElement.innerHTML = '';
+}
+
+function getTableChild(i, j) 
+{
+    if (i === 0)
+    {
+        return  document.createTextNode(columnNames[j]);
+    }
+    else
+    {
+        return document.createElement("input");
+    }
+}
+
+function setTable(table) 
+{
+    for (let i = 0; i <= rows; ++i)
+    {
+        let row = document.createElement("tr");
+
+        for (let j = 0; j < columns; ++j)
+        {
+            let cell = document.createElement("td");
+            let child = getTableChild(i, j);
+
+            cell.appendChild(child);
+            row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+    }
+}
+
+function resizeTable(newRows, newColumns) 
+{
+    const table = document.getElementById("table");
+    erase(table);
+    setTableSize(newRows, newColumns);
+    setTable(table);
+}
+
 function addColumn(columnType)
 {
-    console.log(columnType);
+    columnNames.push(columnType);
+    resizeTable(rows, columns + 1);
 }
 
 function removeColumn()
 {
-    console.log('remove column');
+    if (columns === 1)
+        return;
+    
+    columnNames.pop();
+    resizeTable(rows, columns - 1);
 }
 
 function addRow()
 {
-    console.log('add row');
+    resizeTable(rows + 1, columns);
 }
 
 function removeRow()
 {
-    console.log('remove row');
+    resizeTable(rows - 1, columns);
 }
 
-function updateValue(e)
+window.onclick = function(event)
 {
-    log.textContent = e.target.value;
-}
-
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
+    if (!event.target.matches('.dropbtn')) 
+    {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) 
+        {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) 
+            {
                 openDropdown.classList.remove('show');
             }
         }
