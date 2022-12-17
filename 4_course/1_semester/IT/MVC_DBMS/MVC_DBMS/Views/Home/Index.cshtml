@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/dropdown.css">
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <input placeholder="Enter some text" name="name" />
+    <p id="values"></p>
+    
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Add column</button>
+        <div id="myDropdown" class="dropdown-content">
+            <button onclick="addColumn('INT')">INT</button>
+            <button onclick="addColumn('REAL')">REAL</button>
+            <button onclick="addColumn('CHAR')">CHAR</button>
+            <button onclick="addColumn('STRING')">STRING</button>
+            <button onclick="addColumn('COLOR')">COLOR</button>
+            <button onclick="addColumn('DATE')">DATE</button>
+        </div>
+    </div>
+    
+    
+    <button onclick="removeColumn()">Remove column</button>
+    <button onclick="addRow()">Add row</button>
+    <button onclick="removeRow()">Remove row</button>
+</div>
+
+<script src="~/js/main.js"></script>
