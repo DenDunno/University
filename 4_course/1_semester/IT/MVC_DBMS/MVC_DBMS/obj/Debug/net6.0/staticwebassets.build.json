@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4uYKdcDrLw2OTrEfLYXSo2tJKscbCmuhWPhfCr/bIuo=",
+  "Hash": "3SuZEMCJ7XdLbkiImph7rpUU/d9+QhipVpob7YQvrKo=",
   "Source": "MVC_DBMS",
   "BasePath": "_content/MVC_DBMS",
   "Mode": "Default",
@@ -134,6 +134,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\wwwroot\\js\\table.js",
+      "SourceId": "MVC_DBMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\wwwroot\\",
+      "BasePath": "_content/MVC_DBMS",
+      "RelativePath": "js/table.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\table.js"
+    },
+    {
+      "Identity": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\wwwroot\\js\\validation.js",
+      "SourceId": "MVC_DBMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\wwwroot\\",
+      "BasePath": "_content/MVC_DBMS",
+      "RelativePath": "js/validation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validation.js"
     },
     {
       "Identity": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

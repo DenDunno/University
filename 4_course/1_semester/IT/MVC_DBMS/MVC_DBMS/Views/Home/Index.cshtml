@@ -18,10 +18,13 @@
         </div>
     </div>
     
+    <button hidden id = "removeColumnButton" onclick="removeColumn()">Remove column</button>
+    <button hidden id = "addRowButton" onclick="addRow()">Add row</button>
+    <button hidden id = "removeRowButton" onclick="removeRow()">Remove row</button>
     
-    <button onclick="removeColumn()">Remove column</button>
-    <button onclick="addRow()">Add row</button>
-    <button onclick="removeRow()">Remove row</button>
+    <p id = "result"></p>
 </div>
 
 <script src="~/js/main.js"></script>
+<script src="~/js/validation.js"></script>
+<script src="~/js/table.js"></script>
