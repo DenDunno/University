@@ -3,19 +3,16 @@ let columnNames = [];
 let rows = 0;
 let columns = 0;
 
-function tryShowUpOtherButtons() 
+function showUpOtherButtons() 
 {
-    if (rows === 0 && columns === 0)
-    {
-        document.getElementById("removeRowButton").hidden = false;
-        document.getElementById("addRowButton").hidden = false;
-        document.getElementById("removeColumnButton").hidden = false;
-    }
+    document.getElementById("removeRowButton").hidden = false;
+    document.getElementById("addRowButton").hidden = false;
+    document.getElementById("removeColumnButton").hidden = false;
 }
 
 function addColumn(columnType)
 {
-    tryShowUpOtherButtons();
+    showUpOtherButtons();
     columnNames.push(columnType);
     resizeTable(rows, columns + 1);
 }
@@ -37,6 +34,29 @@ function addRow()
 function removeRow()
 {
     resizeTable(rows - 1, columns);
+}
+
+function finishEditing()
+{
+    const table = document.getElementById("table");
+    let names = readNames(table);
+    let values = readTable(table);
+    let tableName = document.getElementById("tableName").textContent;
+    
+    $.post('FinishTableEditing', { tableJson: JSON.stringify({ Name: tableName, Names : names, Data: values })});
+}
+
+function readNames(table)
+{
+    let result = []
+    let header = table.rows[0];
+    
+    for (let i = 0; i < columns; ++i)
+    {
+        result.push(header.cells[i].firstChild.textContent);
+    }
+    
+    return result;
 }
 
 function resizeTable(newRows, newColumns)
@@ -127,4 +147,15 @@ function getTableChild(i, j, values)
         
         return input;
     }
+}
+
+function setup(rows_input, columns_input)
+{
+    const table = document.getElementById("table");
+    rows = rows_input;
+    columns = columns_input;
+    columnNames = readNames(table);
+    
+    if (columns !== 0)
+        showUpOtherButtons();
 }

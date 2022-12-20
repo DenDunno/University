@@ -6,21 +6,21 @@ namespace MVC_DBMS.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
     public IActionResult Index()
     {
-        return View();
+        return View(new DatabaseModel());
     }
 
     public IActionResult Privacy()
     {
         return View();
+    }
+
+    public IActionResult CreateDatabase(DatabaseModel model)
+    {
+        Database.Create(model.Name);
+        
+        return RedirectToAction("DatabaseEditing", "Database", null);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

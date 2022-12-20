@@ -1,0 +1,80 @@
+﻿@model Table 
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+    <title>title</title>
+</head>
+<link rel="stylesheet" href="~/css/dropdown.css">
+
+<body>
+
+<p id="tableName">@ViewBag.Table.Name</p>
+
+<div class="text-center">
+    <table id="table">
+        
+        @{
+            if (ViewBag.Table.Data.Count != 0)
+            {
+                <tr>
+                    @for (int i = 0; i < @ViewBag.Table.Names.Count; ++i)
+                    {
+                        <td>@ViewBag.Table.Names[i]</td>
+                    }
+                </tr>
+        
+                @for (int i = 0; i < @ViewBag.Table.Data.Count; ++i)
+                {
+                    <tr>
+                        @for (int j = 0; j < @ViewBag.Table.Data[i].Count; ++j)
+                        {
+                            <td><input type="text" value=@ViewBag.Table.Data[i][j]></td>
+                        }
+                    </tr>
+                }
+            }
+        }
+    </table>
+
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Add column</button>
+        <div id="myDropdown" class="dropdown-content">
+            <button onclick="addColumn('INT')">INT</button>
+            <button onclick="addColumn('REAL')">REAL</button>
+            <button onclick="addColumn('CHAR')">CHAR</button>
+            <button onclick="addColumn('STRING')">STRING</button>
+            <button onclick="addColumn('COLOR')">COLOR</button>
+            <button onclick="addColumn('DATE')">DATE</button>
+        </div>
+    </div>
+
+    <button hidden id="removeColumnButton" onclick="removeColumn()">Remove column</button>
+    <button hidden id="addRowButton" onclick="addRow()">Add row</button>
+    <button hidden id="removeRowButton" onclick="removeRow()">Remove row</button>
+
+    <p id="result"></p>
+</div>
+
+<button id="finishEditing" onclick="finishEditing()">Save</button>
+<input type="button" value="Return" onclick="location.href='@Url.Action("DatabaseEditing", "Database")'" />
+
+<script src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js" type="text/javascript"></script> 
+<script src="~/js/main.js"></script>
+<script src="~/js/validation.js"></script>
+<script src="~/js/table.js"></script>
+<script>
+    
+    if (@ViewBag.Table.Names.Count !== 0)
+    {
+        setup(@ViewBag.Table.Data.Count, @ViewBag.Table.Names.Count);        
+    }
+    
+</script>
+</body>
+</html>

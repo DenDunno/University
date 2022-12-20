@@ -1,30 +1,15 @@
-﻿@{
+﻿@model DatabaseModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
-<link rel="stylesheet" href="~/css/dropdown.css">
 
-<div class="text-center">
-    <table id="table"></table>
-    
-    <div class="dropdown">
-        <button onclick="toggleDropdown()" class="dropbtn">Add column</button>
-        <div id="myDropdown" class="dropdown-content">
-            <button onclick="addColumn('INT')">INT</button>
-            <button onclick="addColumn('REAL')">REAL</button>
-            <button onclick="addColumn('CHAR')">CHAR</button>
-            <button onclick="addColumn('STRING')">STRING</button>
-            <button onclick="addColumn('COLOR')">COLOR</button>
-            <button onclick="addColumn('DATE')">DATE</button>
-        </div>
-    </div>
-    
-    <button hidden id = "removeColumnButton" onclick="removeColumn()">Remove column</button>
-    <button hidden id = "addRowButton" onclick="addRow()">Add row</button>
-    <button hidden id = "removeRowButton" onclick="removeRow()">Remove row</button>
-    
-    <p id = "result"></p>
-</div>
 
-<script src="~/js/main.js"></script>
-<script src="~/js/validation.js"></script>
-<script src="~/js/table.js"></script>
+<input type="file" name="database" accept=".json"/>
+
+@using (Html.BeginForm("CreateDatabase", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+    <button type="submit">Create database</button>
+}

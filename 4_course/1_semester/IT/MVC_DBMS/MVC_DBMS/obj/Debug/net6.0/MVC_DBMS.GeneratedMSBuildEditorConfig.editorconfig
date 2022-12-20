@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Business/University/University_3_course/4_course/1_semester/IT/MVC_DBMS/MVC_DBMS/Views/Database/DatabaseEditing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YWJhc2VcRGF0YWJhc2VFZGl0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Business/University/University_3_course/4_course/1_semester/IT/MVC_DBMS/MVC_DBMS/Views/Database/TableEditing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YWJhc2VcVGFibGVFZGl0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Business/University/University_3_course/4_course/1_semester/IT/MVC_DBMS/MVC_DBMS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

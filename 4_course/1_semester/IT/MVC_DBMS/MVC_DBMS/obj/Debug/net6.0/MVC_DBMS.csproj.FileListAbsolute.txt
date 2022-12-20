@@ -24,3 +24,5 @@ D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_D
 D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS\obj\Debug\net6.0\MVC_DBMS.pdb
 D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS\obj\Debug\net6.0\MVC_DBMS.genruntimeconfig.cache
 D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS\obj\Debug\net6.0\ref\MVC_DBMS.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Business\University\University_3_course\4_course\1_semester\IT\MVC_DBMS\MVC_DBMS\obj\Debug\net6.0\MVC_DBMS.csproj.CopyComplete

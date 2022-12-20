@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oA24e3M9Z8TnHnqJC0NZSY1pqGVTKDffiI1/g5t1fhY+zW+eMI6SIlNc+JUpzvEY5RNXxG0dYhNYVxVpMfo5Fg==",
+  "dgSpecHash": "1WTduqKgIG3mftP/USPfgV9G/6fSeoWwMjQ6b9cG8YzoJwDTzJSTKs1CiNerowMBEbKkGyQQ16M15tnGlCA97g==",
   "success": true,
   "projectFilePath": "D:\\Business\\University\\University_3_course\\4_course\\1_semester\\IT\\MVC_DBMS\\MVC_DBMS\\MVC_DBMS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Dunno\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

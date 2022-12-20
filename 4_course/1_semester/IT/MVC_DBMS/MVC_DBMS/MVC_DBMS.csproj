@@ -10,4 +10,12 @@
       <None Include="wwwroot\js\main.js" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\TableEditing\Index.cshtml" />
+    </ItemGroup>
+
 </Project>

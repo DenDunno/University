@@ -1,0 +1,5 @@
+{
+  "Name":"MyDatabase",
+  "TableNames":["Table1","Table2","Table3"],
+  "Tables":[
+    {"Fields":["STRING","INT","CHAR","REAL","COLOR","DATE"],"Data":[["asd","123","s","123","#123456","02.02.2020"],["asd",null,null,null,null,null],["asd","444",null,null,null,null],[null,null,null,null,null,null]]},{"Fields":["STRING"],"Data":[["zxczxc"],["z"],["T"]]},{"Fields":["STRING","INT","CHAR","REAL","COLOR","DATE"],"Data":[[null,"123",null,null,null,null],[null,"123",null,null,null,null],[null,"555",null,null,null,null],[null,null,null,null,null,null]]}]}
