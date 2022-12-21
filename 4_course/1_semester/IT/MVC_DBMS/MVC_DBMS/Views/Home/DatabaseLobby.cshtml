@@ -1,0 +1,21 @@
+﻿@model HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p>@ViewBag.ErrorMessage</p>
+
+@using (Html.BeginForm("LoadDatabase", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+    <button type="submit" value="">Load database</button>
+}
+
+@using (Html.BeginForm("CreateDatabase", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+    <button type="submit" value="">Create database</button>
+}

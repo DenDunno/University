@@ -1,15 +1,14 @@
-﻿@model DatabaseModel
+﻿@model HomeModel
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
+<p>@ViewBag.ErrorMessage</p>
 
-<input type="file" name="database" accept=".json"/>
-
-@using (Html.BeginForm("CreateDatabase", "Home", FormMethod.Post))
+@using (Html.BeginForm("DatabaseLobby", "Home", FormMethod.Post))
 {
     @Html.TextBoxFor(model => model.Name)
     @Html.ValidationMessageFor(model => model.Name)
-    <button type="submit">Create database</button>
+    <button type="submit" value="">Enter</button>
 }

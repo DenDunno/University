@@ -21,16 +21,27 @@
         <div>
             <p>@table.Name</p>
             <input type="button" value="Edit" onclick="location.href='@Url.Action("TableEditing", "Database", new { tableToEdit = @table.Name })'" />
-            <input type="button" value="Delete" onclick="location.href='@Url.Action("TableDeleting", "Database", new { tableToDelete = @table.Name })'" />
+            
+            @if (Role.Value == RoleType.Admin)
+            {
+                <input type="button" value="Delete" onclick="location.href='@Url.Action("TableDeleting", "Database", new {tableToDelete = @table.Name})'"/>
+            }
         </div>
     }
     
-    @using (Html.BeginForm("CreateTable", "Database", FormMethod.Post))
+    @if (Role.Value == RoleType.Admin)
     {
-        @Html.TextBoxFor(model => model.Name)
-        @Html.ValidationMessageFor(model => model.Name)
-        <button type="submit">Create table</button>
+        @using (Html.BeginForm("CreateTable", "Database", FormMethod.Post))
+        {
+            @Html.TextBoxFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+            <button type="submit">Create table</button>
+        }
     }
+    
+    <p></p>
+    <input type="button" value="Save database" onclick="location.href='@Url.Action("SaveDatabase", "Database")'" />
+    <input type="button" value="Return" onclick="location.href='@Url.Action("ReturnToHome", "Database")'" />
 </div>
 
 </body>

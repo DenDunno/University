@@ -46,4 +46,18 @@ public class DatabaseController : Controller
         
         return View("DatabaseEditing");
     }
+
+    public IActionResult SaveDatabase()
+    {
+        string json = JsonConvert.SerializeObject(Database.Instance);
+        
+        System.IO.File.WriteAllText($"{Database.Instance.Name}.json", json);
+        
+        return View("DatabaseEditing");
+    }
+
+    public IActionResult ReturnToHome()
+    {
+        return RedirectToAction("Index", "Home");
+    }
 }
