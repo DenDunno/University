@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "dbefc676-6d8c-4d8d-a7d7-e5f9e3d73340",
+		"name": "DbmsEmulator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dtabase",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7006/database/create/Denis",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"database",
+								"create",
+								"Denis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7006/database/drop/Denis",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"database",
+								"drop",
+								"Denis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7006/database/save/Denis",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"database",
+								"save",
+								"Denis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7006/database/get/Denis",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"database",
+								"get",
+								"Denis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"databaseName\": \"Denis\",\r\n    \"tableName\": \"Hanna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"databaseName\": \"Denis\",\r\n    \"tableName\": \"Hanna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/drop",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"drop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Column",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"baseAddress\": {\r\n        \"databaseName\": \"Denis\",\r\n        \"tableName\": \"Hanna\"\r\n    },\r\n    \"columnType\": \"char\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/add/column",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"add",
+								"column"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"databaseName\": \"Denis\",\r\n    \"tableName\": \"Hanna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/delete/column/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"delete",
+								"column",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Row",
+			"item": [
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"baseAddress\": {\r\n        \"databaseName\": \"Denis\",\r\n        \"tableName\": \"Hanna\"\r\n    },\r\n    \"values\": [\"0\", \"1\", \"#123456\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/insert/row",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"insert",
+								"row"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"databaseName\": \"Denis\",\r\n    \"tableName\": \"Hanna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/delete/row/0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"delete",
+								"row",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cell",
+			"item": [
+				{
+					"name": "Set",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"baseAddress\": {\r\n        \"databaseName\": \"Denis\",\r\n        \"tableName\": \"Hanna\"\r\n    },\r\n    \"columnNumber\": 1,\r\n    \"rowNumber\": 1,\r\n    \"value\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7006/table/set/value",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7006",
+							"path": [
+								"table",
+								"set",
+								"value"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,1 +1,1 @@
-{"Name":"Database","Tables":{"Table2":{"Name":"Table2","Names":["COLOR","CHAR","DATE"],"Data":[["#123456","aasd","02/12/2020"],["","",""]]},"Table1":{"Name":"Table1","Names":["COLOR","DATE","CHAR"],"Data":[["asd","asd","asd"],["1","1","1"]]}}}
+{"Name":"Database","Tables":{"Table1":{"Name":"Table1","Names":["INT","REAL","DATE","COLOR"],"Data":[["","123","02/02/2020","#123456"],["123","12.12","","#AAAAAA"]]},"Table2":{"Name":"Table2","Names":["COLOR"],"Data":[["#AAAAAA"]]}}}
